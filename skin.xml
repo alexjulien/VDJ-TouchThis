@@ -1,0 +1,1474 @@
+﻿<skin name="Touch This!" author="Don Julien - ok404" comment="Optimized for 1920x1200 touchscreen - Version 0.8 - 2024" version="8" preview="preview.png" nbdecks="4" width="1920" height="1200">
+	<copyright>- (c)2024 - Don Julien -</copyright>
+	<font name="Arial"/>
+	<nbdecks value="4"/>
+	<!--======================COLORS======================-->
+	<group name="colors">
+		<group name="decks">
+			<!-- Deck colors -->
+			<define color="deckcolor" value="#156c89" deck="left"/>
+			<define color="deckcolor" value="#ac2f37" deck="right"/>
+			<define color="deckcolorbright" value="#1e7b96" deck="left"/>
+			<define color="deckcolorbright" value="#b73841" deck="right"/>
+			<define color="deckcolordark" value="#0d5269" deck="left"/>
+			<define color="deckcolordark" value="#8e1e25" deck="right"/>
+			
+			<define color="deckcolor" value="#156c89" deck="1"/>
+			<define color="deckcolor" value="#ac2f37" deck="2"/>
+			<define color="deckcolor" value="#0d7264" deck="3"/>
+			<define color="deckcolor" value="#a54d30" deck="4"/>
+			<define color="deckcolorbright" value="#1e7b96" deck="1"/>
+			<define color="deckcolorbright" value="#b73841" deck="2"/>
+			<define color="deckcolorbright" value="#108473" deck="3"/>
+			<define color="deckcolorbright" value="#b05b39" deck="4"/>
+			<define color="deckcolordark" value="#0d5269" deck="1"/>
+			<define color="deckcolordark" value="#8e1e25" deck="2"/>
+			<define color="deckcolordark" value="#0b544a" deck="3"/>
+			<define color="deckcolordark" value="#84341a" deck="4"/>
+			<define color="deckcolor_invert" value="#1e7b96" deck="1"/>
+			<define color="deckcolor_invert" value="#b73841" deck="2"/>
+			<define color="deckcolor_invert" value="#108473" deck="3"/>
+			<define color="deckcolor_invert" value="#b05b39" deck="4"/>
+			<!-- buttons -->
+			<define color="padbuttonselected" value="#17313b" deck="left"/>
+			<define color="padbuttonselected" value="#53181e" deck="right"/>
+			<define color="buttonon" value="#156c89" deck="left"/>
+			<define color="buttonon" value="#ac2f37" deck="right"/>
+			<define color="buttonon_invert" value="#292a2d" deck="left"/>
+			<define color="buttonon_invert" value="#292a2d" deck="right"/>
+			<define color="buttonover" value="#233d48" deck="left"/>
+			<define color="buttonover" value="#502b2f" deck="right"/>
+			<define color="buttonselected" value="#17313b" deck="left"/>
+			<define color="buttonselected" value="#53181e" deck="right"/>
+			
+			<define color="padbuttonselected" value="#17313b" deck="1"/>
+			<define color="padbuttonselected" value="#53181e" deck="2"/>
+			<define color="padbuttonselected" value="#16322f" deck="3"/>
+			<define color="padbuttonselected" value="#4a271d" deck="4"/>
+			<define color="buttonon" value="#156c89" deck="1"/>
+			<define color="buttonon" value="#ac2f37" deck="2"/>
+			<define color="buttonon" value="#0d7264" deck="3"/>
+			<define color="buttonon" value="#a54d30" deck="4"/>
+			<define color="buttonon_invert" value="#292a2d" deck="1"/>
+			<define color="buttonon_invert" value="#292a2d" deck="2"/>
+			<define color="buttonon_invert" value="#292a2d" deck="3"/>
+			<define color="buttonon_invert" value="#292a2d" deck="4"/>
+			<define color="buttonover" value="#233d48" deck="1"/>
+			<define color="buttonover" value="#502b2f" deck="2"/>
+			<define color="buttonover" value="#203f3d" deck="3"/>
+			<define color="buttonover" value="#4e342d" deck="4"/>
+			<define color="buttonselected" value="#17313b" deck="1"/>
+			<define color="buttonselected" value="#53181e" deck="2"/>
+			<define color="buttonselected" value="#16322f" deck="3"/>
+			<define color="buttonselected" value="#4a271d" deck="4"/>
+			
+			<!-- Texts -->
+			<define color="textdeck" value="#1e7b96" deck="left"/>
+			<define color="textdeck" value="#b73841" deck="right"/>
+
+			<define color="textdeck" value="#1e7b96" deck="1"/>
+			<define color="textdeck" value="#b73841" deck="2"/>
+			<define color="textdeck" value="#108473" deck="3"/>
+			<define color="textdeck" value="#b05b39" deck="4"/>
+			<!--- fader and knobs -->
+			<define color="faderinon" value="#156c89" deck="left"/>
+			<define color="faderinon" value="#ac2f37" deck="right"/>
+			<define color="knobfillon" value="#156c89" deck="left"/>
+			<define color="knobfillon" value="#ac2f37" deck="right"/>
+			
+			<define color="faderinon" value="#156c89" deck="1"/>
+			<define color="faderinon" value="#ac2f37" deck="2"/>
+			<define color="faderinon" value="#0d7264" deck="3"/>
+			<define color="faderinon" value="#a54d30" deck="4"/>
+			<define color="knobfillon" value="#156c89" deck="1"/>
+			<define color="knobfillon" value="#ac2f37" deck="2"/>
+			<define color="knobfillon" value="#0d7264" deck="3"/>
+			<define color="knobfillon" value="#a54d30" deck="4"/>
+			<!-- waveforms -->
+			<define color="waveform_active1" value="#156c89"/>
+			<define color="waveform_passive1" value="#0d5269"/>
+			<define color="waveform_active2" value="#ac2f37"/>
+			<define color="waveform_passive2" value="#8e1e25"/>
+			<define color="waveform_active3" value="#0d7264"/>
+			<define color="waveform_passive3" value="#0b544a"/>
+			<define color="waveform_active4" value="#a54d30"/>
+			<define color="waveform_passive4" value="#84341a"/>
+			<define color="colorbass" value="#0b4051" deck="left"/>
+			<define color="colormed" value="#0d5269" deck="left"/>
+			<define color="colorhigh" value="#156c89" deck="left"/>
+			<define color="colorbass" value="#7a121a" deck="right"/>
+			<define color="colormed" value="#8e1e25" deck="right"/>
+			<define color="colorhigh" value="#ac2f37" deck="right"/>
+			<define color="scratch1" value="#0085f4" deck="left"/>
+			<define color="scratch2" value="#0085f4" deck="left"/>
+			<define color="scratch1" value="#ff0013" deck="right"/>
+			<define color="scratch2" value="#ff0013" deck="right"/>
+
+			<define color="colorbass" value="#0b4051" deck="1"/>
+			<define color="colormed" value="#0d5269" deck="1"/>
+			<define color="colorhigh" value="#156c89" deck="1"/>
+			<define color="colorbass" value="#7a121a" deck="2"/>
+			<define color="colormed" value="#8e1e25" deck="2"/>
+			<define color="colorhigh" value="#ac2f37" deck="2"/>
+			<define color="colorbass" value="#0a423a" deck="3"/>
+			<define color="colormed" value="#0b544a" deck="3"/>
+			<define color="colorhigh" value="#0d7264" deck="3"/>
+			<define color="colorbass" value="#6d270f" deck="4"/>
+			<define color="colormed" value="#84341a" deck="4"/>
+			<define color="colorhigh" value="#a54d30" deck="4"/>
+			<define color="scratch2" value="#ff0013" deck="2"/>
+			<define color="scratch1" value="#0085f4" deck="1"/>
+			<define color="scratch2" value="#0085f4" deck="1"/>
+			<define color="scratch1" value="#ff0013" deck="2"/>
+			<define color="scratch2" value="#ff0013" deck="2"/>
+			<define color="scratch1" value="#00ffba" deck="3"/>
+			<define color="scratch2" value="#00ffba" deck="3"/>
+			<define color="scratch1" value="#f94c00" deck="4"/>
+			<define color="scratch2" value="#f94c00" deck="4"/>
+		</group>
+		<group name="colorscheme">
+			<!-- generic -->
+			<define color="white" value="#e3e3e3"/>
+			<define color="black" value="#0a0b0d"/>
+			<define color="darker" value="#131315"/>
+			<define color="dark" value="#151617"/>
+			<define color="gray" value="#909090"/>
+			<define color="graydark" value="#727272"/>
+			<define color="graydarker" value="#525252"/>
+			<define color="dimmed" value="#3b3b3b"/>
+			<define color="green" value="#068a66"/>
+			<define color="darkgreen" value="#007250"/>
+			<!-- backgrounds -->
+			<define color="background" value="#36373a"/>
+			<define color="background2" value="#323336"/>
+			<define color="background3" value="#3a3b3e"/>
+			<define color="dropdown" value="#1d1e1f"/>
+			<define color="dropdownon" value="#191a1b"/>
+			<define color="decktabs" value="#2b2c2f"/>
+			<define color="mixerbackground" value="#2f3033"/>
+			<define color="faderbackground" value="#2f3033"/>
+			<define color="topmenu" value="#323234"/>
+			<define color="vubackground" value="#2b2c2f"/>
+			<define color="display" value="#131315"/>
+			<define color="waveformbackground" value="#101113"/>
+			<define color="browserback" value="#131315"/>
+			<define color="jogwheelbackground" value="#2f3033"/>
+			<define color="pitchlock_off" value="#525252"/>
+			<!-- lines -->
+			<define color="deckinfolines" value="#343536"/>
+			<define color="hightlight" value="#47494c"/>
+			<define color="shadow" value="#505050"/>
+			<define color="faderlines" value="#454545"/>
+			<define color="bordercolor" value="#1b1b1b"/>
+			<define color="bordercolor2" value="#242424"/>
+			<define color="bordercolor3" value="#252628"/>
+			<define color="needle" value="#d1d1d1"/>
+			<!-- browser -->
+			<define color="browserstripe" value="#212224"/>
+			<define color="browserover" value="#1b1e20"/>
+			<define color="browseroverstripe" value="#1d2022"/>
+			<define color="browseroverfocus" value="#4b4c4d"/>
+			<define color="browser_scrollbar" value="#323336"/>
+			<define color="browser_scrollbtn" value="#9b9b9b"/>
+			<define color="browser_seperatorline" value="#7E7E7E"/>
+			<define color="browser_seperatortab" value="#4d4e52"/>
+			<!-- browser grid -->
+			<define color="browsergrid_bg" value="#212223"/>
+			<define color="browsergrid_over" value="#2b2c2d"/>
+			<define color="browsergrid_selected" value="#303032"/>
+			<define color="browsergrid_focus" value="#424244"/>
+			<!-- sideview buttons -->
+			<define color="browser_toolbarbutton" value="#525254"/>
+			<define color="browser_toolbarbuttonover" value="#464748"/>
+			<!-- browser sampler pads -->
+			<define color="browser_button" value="#2f3033"/>
+			<define color="browser_buttonactive" value="#4d4e52"/>
+			<define color="browser_buttonselected" value="#4d4e52"/>
+			<!-- browser list stripes -->
+			<define color="browser_automix" value="#2e6b76"/>
+			<define color="browser_scan" value="#89cea5"/>
+			<define color="browser_scan" value="#89cea5"/>
+			<define color="browser_selected" value="#393a3b"/>
+			<define color="browser_download" value="#813e00"/>
+			<!-- browser icon buttons -->
+			<define color="browser_iconbuttonup" value="#3b3b3b"/>
+			<define color="browser_iconbuttonover" value="#565758"/>
+			<define color="browser_iconbuttondown" value="#2f3032"/>
+			<define color="browser_iconbuttonselected" value="#4d4e52"/>
+			<define color="browser_iconbuttonactive" value="#2e6b76"/>
+			<!-- buttons-->
+			<define color="buttonon" value="#b03239" deck="right"/>
+			<define color="buttonoff" value="#292a2d"/>
+			<define color="buttonon" value="#4f5076" deck="master"/>
+			<define color="buttonselected" value="#4f5076" deck="master"/>
+			<define color="buttonover" value="#32333f" deck="master"/>
+			<define color="mbuttonon" value="#4f5076"/>
+			<define color="mbuttonover" value="#32333f"/>
+			<!-- Texts -->
+			<define color="textdarkdark" value="#666666"/>
+			<define color="textdarker" value="#727272"/>
+			<define color="textdark" value="#7c7c7c"/>
+			<define color="textoff3" value="#9b9b9b"/>
+			<define color="textoff2" value="#a6a6a6"/>
+			<define color="textoff" value="#c6c6c6"/>
+			<define color="textover" value="#d1d1d1"/>
+			<define color="texton" value="#d4d4d4"/>
+			<define color="textbright" value="#e8e8e8"/>
+			<define color="textbrowser" value="#d4d4d4"/>
+			<define color="textselected" value="#a6a6a6"/>
+			<define color="artist" value="#d1d1d1"/>
+			<define color="feat" value="#a6a6a6"/>
+			<define color="title" value="#dadada"/>
+			<define color="remix" value="#9b9b9b"/>
+			<!-- Faders and  Knobs -->
+			<define color="faderinoff" value="#111113"/>
+			<define color="faderinon" value="#136b87" deck="left"/>
+			<define color="faderinon" value="#b0333b" deck="right"/>
+			<define color="faderinleft" value="#1e7695"/>
+			<define color="faderinright" value="#bb3536"/>
+			<define color="knobcolor1" value="#323336"/>
+			<define color="knobcolor2" value="#2d2e31"/>
+			<define color="knobfader" value="#848484"/>
+			<define color="knobfilloff" value="#252628"/>
+			<define color="knobfillon" value="#106b81" deck="left"/>
+			<define color="knobfillon" value="#b0333b" deck="right"/>
+			<define color="knobfillmaster" value="#4f5076"/>
+			<define color="knobfillongray" value="#606060"/>
+			<define color="colorbass" value="#71521c" deck="sandbox"/>
+			<define color="colormed" value="#896526" deck="sandbox"/>
+			<define color="colorhigh" value="#c0892a" deck="sandbox"/>
+			<define color="colorplayed" value="black"/>
+			<!-- waveforms -->
+			<define color="waveform_active1" value="#156c89"/>
+			<define color="waveform_passive1" value="#0d5269"/>
+			<define color="waveform_active2" value="#ac2f37"/>
+			<define color="waveform_passive2" value="#8e1e25"/>
+			<define color="waveform_active3" value="#0d7264"/>
+			<define color="waveform_passive3" value="#0b544a"/>
+			<define color="waveform_active4" value="#a54d30"/>
+			<define color="waveform_passive4" value="#84341a"/>
+
+			<define color="colorbass" value="#0b4051" deck="left"/>
+			<define color="colormed" value="#0d5269" deck="left"/>
+			<define color="colorhigh" value="#156c89" deck="left"/>
+			<define color="colorbass" value="#7a121a" deck="right"/>
+			<define color="colormed" value="#8e1e25" deck="right"/>
+			<define color="colorhigh" value="#ac2f37" deck="right"/>
+
+			<define color="colorbass" value="#0b4051" deck="1"/>
+			<define color="colormed" value="#0d5269" deck="1"/>
+			<define color="colorhigh" value="#156c89" deck="1"/>
+			<define color="colorbass" value="#7a121a" deck="2"/>
+			<define color="colormed" value="#8e1e25" deck="2"/>
+			<define color="colorhigh" value="#ac2f37" deck="2"/>
+			<define color="colorbass" value="#0a423a" deck="3"/>
+			<define color="colormed" value="#0b544a" deck="3"/>
+			<define color="colorhigh" value="#0d7264" deck="3"/>
+			<define color="colorbass" value="#6d270f" deck="4"/>
+			<define color="colormed" value="#84341a" deck="4"/>
+			<define color="colorhigh" value="#a54d30" deck="4"/>
+			<define color="scratch1" value="#0085f4" deck="1"/>
+			<define color="scratch2" value="#0085f4" deck="1"/>
+			<define color="scratch1" value="#ff0013" deck="2"/>
+			<define color="scratch2" value="#ff0013" deck="2"/>
+			<define color="scratch1" value="#00ffba" deck="3"/>
+			<define color="scratch2" value="#00ffba" deck="3"/>
+			<define color="scratch1" value="#f94c00" deck="4"/>
+			<define color="scratch2" value="#f94c00" deck="4"/>
+		</group>
+	</group><!-- colors -->
+
+	<!--======================COMPONENTS======================-->
+	<group name="components">
+		<!--======================BUTTONS & KNOBS======================-->
+		<group name="buttons">
+			<define class="button1" placeholders="*button_width=60,*button_height=35">
+				<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]"/>
+				<off shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
+				<over shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
+				<down shape="square" color="deckcolor" border="bordercolor" border_size="1" radius="5"/>
+				<text fontsize="12" color="textdark" colorover="textover" colordown="textover" weight="" align="center" localize="true" important="true"/>
+				<icon sysicon="[SYSICON]" coloroff="textdark" colorover="textover" colordown="texton" colorselected="texton" width="20" height="20"/>
+			</define>
+			<define class="button2" placeholders="*button_width=60,*button_height=60,sysicon">
+				<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]"/>
+				<off shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
+				<over shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
+				<down shape="square" color="deckcolor" border="bordercolor" border_size="1" radius="5"/>
+				<text fontsize="12" color="textdark" colorover="textover" colordown="textover" weight="" align="center" localize="true" important="true"/>
+				<icon sysicon="[SYSICON]" coloroff="textdark" colorover="textover" colordown="texton" colorselected="texton" width="30" height="30"/>
+			</define>
+			<define class="extra_button" placeholders="sysicon,text,iconsize,*button_width=60,*button_height=60,textcolor=textoff">
+				<button>
+					<pos x="+0" y="+[BUTTON_HEIGHT]*2"/>
+					<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]"/>
+					<off shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
+					<!--{1}**over shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"-->
+					<down shape="square" color="buttonon_invert" border="bordercolor" border_size="1" radius="5"/>
+					<icon sysicon="[SYSICON]" coloroff="[TEXTCOLOR]" colorover="textover" colordown="texton" colorselected="texton" width="[ICONSIZE]" height="[ICONSIZE]"/>
+				</button>
+				<textzone>
+					<pos x="+0" y="+[BUTTON_HEIGHT]"/>
+					<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]/2"/>
+					<text align="center" valign="middle"/>
+				</textzone>
+			</define>
+			<define class="up_down_num">
+				<button>
+					<pos x="+0" y="+0"/>
+					<size width="30" height="48"/>
+					<icon sysicon="arrowleft" width="32" height="32" align="left" color="textoff2" colorover="textover" colordown="texton"/>
+				</button>
+				<button>
+					<pos x="+30+4" y="+0"/>
+					<size width="50" height="48"/>
+					<text fontsize="22" color="textdarker" colorover="textover" colorselected="deckcolorbright" align="center" weight="bold" important="true"/>
+				</button>
+				<button>
+					<pos x="+30+50+8" y="+0"/>
+					<size width="30" height="48"/>
+					<icon sysicon="arrowright" width="32" height="32" align="left" coloroff="textoff2" colorover="textover" colordown="texton"/>
+				</button>
+			</define>
+			<define class="up_down_txt">
+				<button>
+					<pos x="+0" y="+0"/>
+					<size width="30" height="48"/>
+					<icon sysicon="arrowleft" width="32" height="32" align="left" color="textoff2" colorover="textover" colordown="texton"/>
+				</button>
+				<button>
+					<pos x="+30+4" y="+0"/>
+					<size width="150" height="48"/>
+					<text fontsize="22" color="textdarker" colorover="textover" colorselected="deckcolorbright" align="center" weight="bold" important="true"/>
+				</button>
+				<button>
+					<pos x="+30+150+8" y="+0"/>
+					<size width="30" height="48"/>
+					<icon sysicon="arrowright" width="32" height="32" align="left" coloroff="textoff2" colorover="textover" colordown="texton"/>
+				</button>
+			</define>
+		</group>
+		<group name="knobs">
+			<define class="knob_with_2buttons" classdeck="left" placeholders="*knob_width=90,*knob_height=90,*button_width=60,*button_height=35">
+				<slider orientation="round">
+					<pos x="+[BUTTON_WIDTH]+20" y="+0"/>
+					<size width="[KNOB_WIDTH]" height="[KNOB_HEIGHT]"/>
+					<off width="[KNOB_WIDTH]-10" height="[KNOB_HEIGHT]-10" shape="circle" color="knobcolor1" color2="knobcolor2" gradient="vertical" border="bordercolor" border_size="1"/>
+					<fader color="knobfader" width="4" height="[KNOB_HEIGHT]/2-10" radius="6" anglemin="-140" anglemax="140"/>
+					<fill width="[KNOB_WIDTH]" height="[KNOB_HEIGHT]" radius="16" color="knobfillon" backcolor="knobfilloff"/>
+				</slider>
+				<button class="button1">
+					<pos x="+0" y="+0"/>
+				</button>
+				<button class="button1">
+					<pos x="+0" y="+[BUTTON_HEIGHT]+10"/>
+				</button>
+			</define>
+			<define class="knob_with_2buttons" classdeck="right" placeholders="*knob_width=90,*knob_height=90,*button_width=60,*button_height=35">
+				<slider orientation="round">
+					<pos x="+10" y="+0"/>
+					<size width="[KNOB_WIDTH]" height="[KNOB_HEIGHT]"/>
+					<off width="[KNOB_WIDTH]-10" height="[KNOB_HEIGHT]-10" shape="circle" color="knobcolor1" color2="knobcolor2" gradient="vertical" border="bordercolor" border_size="1"/>
+					<fader color="knobfader" width="4" height="[KNOB_HEIGHT]/2-10" radius="6" anglemin="-140" anglemax="140"/>
+					<fill width="[KNOB_WIDTH]" height="[KNOB_HEIGHT]" radius="16" color="knobfillon" backcolor="knobfilloff"/>
+				</slider>
+				<button class="button1">
+					<pos x="+[KNOB_WIDTH]+30" y="+0"/>
+				</button>
+				<button class="button1">
+					<pos x="+[KNOB_WIDTH]+30" y="+[BUTTON_HEIGHT]+10"/>
+				</button>
+			</define>
+			<define class="volume_fader" classdeck="left" placeholders="*knob_width=30,*knob_height=180,*button_width=60,*button_height=60">
+				<slider orientation="round">
+					<pos x="+0" y="+0"/>
+					<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]"/>
+					<off width="[BUTTON_WIDTH]-10" height="[BUTTON_HEIGHT]-10" shape="circle" color="knobcolor1" color2="knobcolor2" gradient="vertical" border="bordercolor" border_size="1"/>
+					<fader color="knobfader" width="4" height="[BUTTON_HEIGHT]/2-10" radius="6" anglemin="-140" anglemax="140"/>
+					<fill width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]" radius="16" color="knobfillon" backcolor="knobfilloff"/>
+				</slider>
+				<textzone>
+					<pos x="+0" y="+[BUTTON_HEIGHT]"/>
+					<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]/2"/>
+				</textzone>
+				<textzone>
+					<pos x="+0" y="+[BUTTON_HEIGHT]/2+[BUTTON_HEIGHT]"/>
+					<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]/2"/>
+				</textzone>
+				<button>
+					<pos x="+0" y="+[BUTTON_HEIGHT]*2"/>
+					<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]"/>
+					<off shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
+					<!--over shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/-->
+					<down shape="square" color="buttonon_invert" border="bordercolor" border_size="1" radius="5"/>
+				</button>
+				<slider action="level" rightclick="temporary" orientation="vertical">
+					<pos x="+115" y="+0"/>
+					<size width="30" height="180"/>
+					<off height="-16" color="faderinoff" shape="square" border="faderbackground" border_size="1" radius="3"/>
+					<on height="-16" color="graydark" shape="square" border="bordercolor" border_size="1" radius="3"/>
+					<mouserect x="+0" y="+0" width="30" height="180"/>
+					<fader>
+						<size width="60" height="16"/>
+						<off x="184" y="0"/>
+					</fader>
+				</slider>
+			</define>
+			<define class="extra_knob" placeholders="*button_width=60,*button_height=60">
+				<slider orientation="round">
+					<pos x="+0" y="+0"/>
+					<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]"/>
+					<off width="[BUTTON_WIDTH]-10" height="[BUTTON_HEIGHT]-10" shape="circle" color="knobcolor1" color2="knobcolor2" gradient="vertical" border="bordercolor" border_size="1"/>
+					<fader color="knobfader" width="4" height="[BUTTON_HEIGHT]/2-10" radius="6" anglemin="-140" anglemax="140"/>
+					<fill width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]" radius="16" color="knobfillon" backcolor="knobfilloff"/>
+				</slider>
+				<textzone>
+					<pos x="+0" y="+[BUTTON_HEIGHT]"/>
+					<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]/2"/>
+					<text align="center" valign="middle"/>
+				</textzone>
+			</define>
+			<define class="volume_fader" classdeck="right" placeholders="*knob_width=30,*knob_height=180,*button_width=60,*button_height=60">
+				<slider orientation="round">
+					<pos x="+115" y="+0"/>
+					<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]"/>
+					<off width="[BUTTON_WIDTH]-10" height="[BUTTON_HEIGHT]-10" shape="circle" color="knobcolor1" color2="knobcolor2" gradient="vertical" border="bordercolor" border_size="1"/>
+					<fader color="knobfader" width="4" height="[BUTTON_HEIGHT]/2-10" radius="6" anglemin="-140" anglemax="140"/>
+					<fill width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]" radius="16" color="knobfillon" backcolor="knobfilloff"/>
+				</slider>
+				<textzone>
+					<pos x="+115" y="+[BUTTON_HEIGHT]"/>
+					<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]/2"/>
+				</textzone>
+				<textzone>
+					<pos x="+115" y="+[BUTTON_HEIGHT]/2+[BUTTON_HEIGHT]"/>
+					<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]/2"/>
+				</textzone>
+				<button>
+					<pos x="+115" y="+[BUTTON_HEIGHT]*2"/>
+					<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]"/>
+					<off shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
+					<!--over shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/-->
+					<down shape="square" color="buttonon_invert" border="bordercolor" border_size="1" radius="5"/>
+				</button>
+				<slider action="level" rightclick="temporary" orientation="vertical">
+					<pos x="+35" y="+0"/>
+					<size width="30" height="180"/>
+					<off height="-16" color="faderinoff" shape="square" border="faderbackground" border_size="1" radius="3"/>
+					<on height="-16" color="graydark" shape="square" border="bordercolor" border_size="1" radius="3"/>
+					<mouserect x="+0" y="+0" width="30" height="180"/>
+					<fader>
+						<size width="60" height="16"/>
+						<off x="184" y="0"/>
+					</fader>
+				</slider>
+			</define>
+			<!-- not used knob_small, could be useful -->
+			<define class="knob_small" placeholders="*width=60,*height=60">
+				<slider orientation="round">
+					<pos x="+[WIDTH]/2" y="+0"/>
+					<size width="[WIDTH]" height="[HEIGHT]"/>
+					<off width="[WIDTH]-10" height="[HEIGHT]-10" shape="circle" color="knobcolor1" color2="knobcolor2" gradient="vertical" border="bordercolor" border_size="1"/>
+					<fader color="knobfader" width="2" height="[HEIGHT]/2-5" radius="6" anglemin="-140" anglemax="140"/>
+					<fill width="[WIDTH]" height="[HEIGHT]" radius="16" color="knobfillon" backcolor="knobfilloff"/>
+				</slider>
+				<textzone visibility="true">
+					<pos x="+[WIDTH]/2" y="+[HEIGHT]"/>
+					<size width="[WIDTH]" height="14"/>
+					<text fontsize="16" color="textoff2" align="center" important="true"/>
+				</textzone>
+				<textzone visibility="false">
+					<pos x="+[WIDTH]/2" y="+[HEIGHT]"/>
+					<size width="[WIDTH]" height="14"/>
+					<text fontsize="16" color="textdarkdark" align="center" important="true"/>
+				</textzone>
+			</define>
+		</group>
+		<!--======================TRANSPORT======================-->
+		<group name="transport">
+			<define class="button_transport" placeholders="width=180,height=90,text,important=true,textaction,sysicon,iconsize,textsize=18,weight=normal,textcolor=textoff">
+				<size width="[WIDTH]" height="[HEIGHT]"/>
+				<off color="buttonoff" shape="square" border="bordercolor" border_size="1" radius="2"/>
+				<over color="buttonover" shape="square" border="bordercolor" border_size="1" radius="2"/>
+				<selected color="buttonon" shape="square" border="bordercolor" border_size="1" radius="2"/>
+				<down color="buttonon" shape="square" border="bordercolor" border_size="1" radius="2"/>
+				<text fontsize="[TEXTSIZE]" weight="[WEIGHT]" color="[TEXTCOLOR]" colorover="textover" colorselected="texton" colordown="texton" align="center" action="[TEXTACTION]" text="[TEXT]" localize="true" important="[IMPORTANT]"/>
+				<icon sysicon="[SYSICON]" coloroff="[TEXTCOLOR]" colorover="textover" colordown="texton" colorselected="texton" width="[ICONSIZE]" height="[ICONSIZE]"/>
+			</define>
+			<!-- am I using this? -->
+			<define class="button_transportselect" placeholders="width=62,height=30,text,important=true,textaction,sysicon,iconsize,textsize=11,weight=normal">
+				<size width="[WIDTH]" height="[HEIGHT]"/>
+				<off color="buttonoff" shape="square" border="bordercolor" border_size="1" radius="2"/>
+				<over color="buttonover" shape="square" border="bordercolor" border_size="1" radius="2"/>
+				<selected color="buttonselected" shape="square" border="buttonoff" border_size="1" radius="2"/>
+				<down color="buttonon" shape="square" border="bordercolor" border_size="1" radius="2"/>
+				<text fontsize="[TEXTSIZE]" weight="[WEIGHT]" color="textoff" colorover="textover" colorselected="texton" colordown="texton" align="center" action="[TEXTACTION]" text="[TEXT]" localize="true" important="[IMPORTANT]"/>
+				<icon sysicon="[SYSICON]" coloroff="textoff" colorover="textover" colordown="texton" colorselected="texton" width="[ICONSIZE]" height="[ICONSIZE]"/>
+			</define>
+			<define class="transport" placeholders="*width=205,*height=90">
+				<button class="button_transport" x="+[HEIGHT]" y="+0" action="cue_button" textaction="cue_button"/>
+				<button class="button_transport" x="+[HEIGHT]+[WIDTH]" y="+0" sysicon="play_button" iconsize="[HEIGHT]*2/3" action="play_button"/>
+				<button class="button_transport" x="+[HEIGHT]+[WIDTH]+[WIDTH]" y="+0" action="sync" text="SYNC" localize="true"/>
+			</define>
+		</group>
+		<!--======================PADS======================-->
+		<group name="pads">
+			<define class="button_padselect" placeholders="important=true,textaction,*width=80,*height=60">
+				<off shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
+				<over shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
+				<down shape="square" color="deckcolor" border="bordercolor" border_size="1" radius="5"/>
+				<text fontsize="12" color="textdark" colorover="textover" colordown="textover" weight="" align="center" localize="true"
+					action="[TEXTACTION]" important="[IMPORTANT]"/>
+				<size width="[WIDTH]" height="[HEIGHT]"/>
+			</define>
+
+			<define class="padselector" placeholders="important=true,textaction,*width=87,*height=60">
+				<button class="button_padselect" x="+0*[WIDTH]" y="+0" action="pad_page btn1" rightclick="pad_page_select 1" textaction="pad_page btn1 &amp; param_uppercase"/>
+				<button class="button_padselect" x="+1*[WIDTH]" y="+0" action="pad_page btn2" rightclick="pad_page_select 2" textaction="pad_page btn2 &amp; param_uppercase"/>
+				<button class="button_padselect" x="+2*[WIDTH]" y="+0" action="pad_page btn3" rightclick="pad_page_select 3" textaction="pad_page btn3 &amp; param_uppercase"/>
+				<button class="button_padselect" x="+3*[WIDTH]" y="+0" action="pad_page btn4" rightclick="pad_page_select 4" textaction="pad_page btn4 &amp; param_uppercase"/>
+				<button class="button_padselect" x="+4*[WIDTH]" y="+0" action="pad_page btn5" rightclick="pad_page_select 5" textaction="pad_page btn5 &amp; param_uppercase"/>
+				<button class="button_padselect" x="+5*[WIDTH]" y="+0" action="pad_page btn6" rightclick="pad_page_select 6" textaction="pad_page btn6 &amp; param_uppercase"/>
+				<button class="button_padselect" x="+6*[WIDTH]" y="+0" action="pad_page btn7" rightclick="pad_page_select 7" textaction="pad_page btn7 &amp; param_uppercase"/>
+				<button class="button_padselect" x="+7*[WIDTH]" y="+0" action="pad_page btn8" rightclick="pad_page_select 8" textaction="pad_page btn8 &amp; param_uppercase"/>
+			</define>
+
+			<define class="padbutton" placeholders="action,rightclick,important=true,textaction,sourcecolor,textsize=22,*width=150,*height=120">
+				<button action="[ACTION]" rightclick="[RIGHTCLICK]">
+					<size width="[WIDTH]" height="[HEIGHT]"/>
+					<off color="buttonoff" shape="square" border="bordercolor" border_size="1" radius="2"/>
+					<over color="buttonover" shape="square" border="bordercolor" border_size="1" radius="2"/>
+					<selected color="padbuttonselected" shape="square" border="buttonon" border_size="1" radius="2"/>
+					<down color="buttonon" shape="square" border="buttonon" border_size="1" radius="2"/>
+					<text dx="+[WIDTH]/10" dy="[HEIGHT]/10" width="[WIDTH]*8/10" fontsize="[TEXTSIZE]" color="textoff2" colorover="textover" colorselected="textselected" colordown="texton" align="center" action="[TEXTACTION]" important="[IMPORTANT]"/>
+				</button>
+				<visual type="color" source="[SOURCECOLOR]" visibility="0.6" tooltip="">
+					<pos x="+[WIDTH]/10" y="+[HEIGHT]/10"/>
+					<size width="[WIDTH]*8/10" height="[HEIGHT]/20"/>
+				</visual>
+			</define>
+			<define class="padbuttons" placeholders="*xoffset=180,*yoffset=150">
+				<panel class="padbutton" x="+0*[XOFFSET]" y="+0*[YOFFSET]" action="pad 1" rightclick="padshift 1" textaction="pad 1" sourcecolor="pad_color 1"/>
+				<panel class="padbutton" x="+1*[XOFFSET]" y="+0*[YOFFSET]" action="pad 2" rightclick="padshift 2" textaction="pad 2" sourcecolor="pad_color 2"/>
+				<panel class="padbutton" x="+2*[XOFFSET]" y="+0*[YOFFSET]" action="pad 3" rightclick="padshift 3" textaction="pad 3" sourcecolor="pad_color 3"/>
+				<panel class="padbutton" x="+3*[XOFFSET]" y="+0*[YOFFSET]" action="pad 4" rightclick="padshift 4" textaction="pad 4" sourcecolor="pad_color 4"/>
+				<panel class="padbutton" x="+0*[XOFFSET]" y="+1*[YOFFSET]" action="pad 5" rightclick="padshift 5" textaction="pad 5" sourcecolor="pad_color 5"/>
+				<panel class="padbutton" x="+1*[XOFFSET]" y="+1*[YOFFSET]" action="pad 6" rightclick="padshift 6" textaction="pad 6" sourcecolor="pad_color 6"/>
+				<panel class="padbutton" x="+2*[XOFFSET]" y="+1*[YOFFSET]" action="pad 7" rightclick="padshift 7" textaction="pad 7" sourcecolor="pad_color 7"/>
+				<panel class="padbutton" x="+3*[XOFFSET]" y="+1*[YOFFSET]" action="pad 8" rightclick="padshift 8" textaction="pad 8" sourcecolor="pad_color 8"/>
+			</define>
+			<define class="padparams">
+				<panel class="up_down_txt" x="+0" y="+0">
+					<button action="pad_param -1" visibility="pad_has_param 1"/>
+					<button>
+						<text action="pad_param"/>
+					</button>
+					<button action="pad_param +1" visibility="pad_has_param 1">
+					</button>
+				</panel>
+				<panel class="up_down_txt" x="+0" y="+45">
+					<button action="pad_param2 -1" visibility="pad_has_param 2"/>
+					<button>
+						<text action="pad_param2"/>
+					</button>
+					<button action="pad_param2 +1" visibility="pad_has_param 2">
+					</button>
+				</panel>
+			</define>
+
+		</group><!-- pads -->
+		<!--======================SONG INFO======================-->
+		<define class="songinfo" placeholders="*width=690,*height=90">
+			<cover>
+				<pos x="+0" y="+0"/>
+				<size width="[HEIGHT]" height="[HEIGHT]"/>
+			</cover>
+			<songpos name="songpos" colorPlayed="darker" colorBass="colorbass" colorMed="colormed" colorHigh="colorhigh" placeholders="*width=690,*height=90">
+				<pos x="+[HEIGHT]+5" y="+0"/>
+				<size width="[WIDTH]-[HEIGHT]-10" height="2*[HEIGHT]/3"/>
+				<wave>
+					<off color="display"/>
+					<size height="[HEIGHT]"/>
+					<pos y="+0"/>
+				</wave>
+				<cues dy="0" shade="0.2">
+					<size width="9" height="34-2"/>
+					<clipmask x="277" y="0"/>
+				</cues>
+				<loops dy="0">
+					<size width="5" height="34-2"/>
+					<clipmask x="291" y="0"/>
+				</loops>
+			</songpos>				
+			<panel name="songinfo">
+				<textzone group="horizontal" scroll="no" click="scroll" align="left">
+					<pos x="+[HEIGHT]+5" y="+2*[HEIGHT]/3-10"/>
+					<size width="[WIDTH]-[HEIGHT]" height="[HEIGHT]/2"/>
+					<text fontsize="18" color="title" weight="bold" action="get_title_before_remix" important="true"/>
+					<text fontsize="18" color="remix" action="get_remix_after_title" important="true"/>
+				</textzone>
+				<textzone group="horizontal" scroll="no" click="scroll" align="right">
+					<pos x="-3" y="+2*[HEIGHT]/3-10"/>
+					<size width="[WIDTH]-[HEIGHT]" height="[HEIGHT]/2"/>
+					<text fontsize="15" color="artist" action="get_artist_before_feat" important="true"/>
+					<text fontsize="15" color="feat" action="get_featuring_after_artist" important="true"/>
+				</textzone>
+			</panel>
+		</define>
+		<!--======================FXPAD======================-->
+		<define class="fxpad" placeholders="*width=268,*height=230">
+			<group x="+0" y="+0">
+				<square border="1" border_color="black" color="faderbackground">
+					<pos x="-1" y="-1"/>
+					<size width="[WIDTH]+2" height="[HEIGHT]+2"/>
+				</square>
+				<slider orientation="2d" 
+					action="var 'fxtemp' ? effect_slider 1 : effect_slider_active 1" 
+					direction="right" 
+					action2="var 'fxtemp' ? effect_slider 2 : effect_slider_active 2"
+					direction2="up">
+					<tooltip/>
+					<pos x="+0" y="+0"/>
+					<size width="[WIDTH]" height="[HEIGHT]"/>
+					<fader>
+						<size width="[WIDTH]/8" height="[HEIGHT]/8"/>
+						<off color="deckcolorbright"/>
+					</fader>
+				</slider>
+				<textzone>
+					<pos x="+2" y="+2"/>
+					<size width="100" height="30"/>
+					<text fontsize="18" align="left" valign="top" action="get_effect_name 1"/>
+				</textzone>
+				<textzone>
+					<pos x="+2" y="+[HEIGHT]-40"/>
+					<size width="100" height="20"/>
+					<text fontsize="12" align="left" valign="top" action="get_effect_slider_name 1"/>
+				</textzone>
+				<textzone>
+					<pos x="+2" y="+[HEIGHT]-22"/>
+					<size width="100" height="20"/>
+					<text fontsize="16" align="left" valign="top" action="get_effect_slider_text 1"/>
+				</textzone>
+				<textzone>
+					<pos x="+[WIDTH]-102" y="+2"/>
+					<size width="100" height="20"/>
+					<text fontsize="12" align="right" valign="top" action="get_effect_slider_name 2"/>
+				</textzone>
+				<textzone>
+					<pos x="+[WIDTH]-102" y="+22"/>
+					<size width="100" height="20"/>
+					<text fontsize="16" align="right" valign="top" action="get_effect_slider_text 2"/>
+				</textzone>
+				<button class="button1" action="effect_select 1">
+					<pos x="+0" y="+[HEIGHT]+10"/>
+					<text text="FX"/>
+				</button>
+				<button class="button1" action="toggle 'fxtemp' & effect_active">
+					<pos x="+70" y="+[HEIGHT]+10"/>
+					<text action="$fxtemp & 'hold'"/>
+				</button>
+				<button class="button1" action="effect_button 1">
+					<pos x="+140" y="+[HEIGHT]+10"/>
+					<text action="get_effect_button_name 1"/>
+				</button>
+				<button class="button1" action="effect_button 2">
+					<pos x="+210" y="+[HEIGHT]+10"/>
+					<text action="get_effect_button_name 2"/>
+				</button>
+				
+				<button class="button1" action="effect_select 1 'Echo'">
+					<pos x="+0" y="+[HEIGHT]+55"/>
+					<text text="ECHO"/>
+				</button>
+				<button class="button1" action="effect_select 1 'Cut'">
+					<pos x="+70" y="+[HEIGHT]+55"/>
+					<text text="CUT"/>
+				</button>
+				<button class="button1" action="effect_select 1 'Beat Grid'">
+					<pos x="+140" y="+[HEIGHT]+55"/>
+					<text text="BEAT GRID"/>
+				</button>
+				<button class="button1" action="effect_select 1 'Flanger'">
+					<pos x="+210" y="+[HEIGHT]+55"/>
+					<text text="FLANGER"/>
+				</button>
+				
+				<button class="button1" action="effect_select 1 'Delay'">
+					<pos x="+0" y="+[HEIGHT]+100"/>
+					<text text="DELAY"/>
+				</button>
+				<button class="button1" action="effect_select 1 'Filter'">
+					<pos x="+70" y="+[HEIGHT]+100"/>
+					<text text="FILTER"/>
+				</button>
+				<button class="button1" action="effect_select 1 'Noise'">
+					<pos x="+140" y="+[HEIGHT]+100"/>
+					<text text="NOISE"/>
+				</button>
+				<button class="button1" action="effect_select 1 'Phaser'">
+					<pos x="+210" y="+[HEIGHT]+100"/>
+					<text text="PHASER"/>
+				</button>
+			</group>			
+		</define>
+		<!--======================VU METERS======================-->		
+		<define class="vu_meter_v" placeholders="*led_width=4,*led_height=4,*spacing=6">
+			<led x="+10" y="+20*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led x="+10" y="+19*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led x="+10" y="+18*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led x="+10" y="+17*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led x="+10" y="+16*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led x="+10" y="+15*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led x="+10" y="+14*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led x="+10" y="+13*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led x="+10" y="+12*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led x="+10" y="+11*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led x="+10" y="+10*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led x="+10" y="+9*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led x="+10" y="+8*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led x="+10" y="+7*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led x="+10" y="+6*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led x="+10" y="+5*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led x="+10" y="+4*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led x="+10" y="+3*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolorbright" radius="0" border="black" border_size="0"/>
+			</led>
+			<led x="+10" y="+2*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolorbright" radius="0" border="black" border_size="0"/>
+			</led>
+			<led x="+10" y="+1*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolorbright" radius="0" border="black" border_size="0"/>
+			</led>
+		</define>
+		<define class="vu_meter_h" placeholders="*led_width=12,*led_height=4,*spacing=15">
+			<led y="+10" x="+20*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led y="+10" x="+19*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led y="+10" x="+18*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led y="+10" x="+17*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led y="+10" x="+16*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led y="+10" x="+15*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led y="+10" x="+14*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led y="+10" x="+13*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led y="+10" x="+12*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led y="+10" x="+11*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led y="+10" x="+10*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led y="+10" x="+9*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led y="+10" x="+8*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led y="+10" x="+7*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led y="+10" x="+6*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led y="+10" x="+5*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led y="+10" x="+4*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolor" radius="0" border="black" border_size="0"/>
+			</led>
+			<led y="+10" x="+3*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolorbright" radius="0" border="black" border_size="0"/>
+			</led>
+			<led y="+10" x="+2*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolorbright" radius="0" border="black" border_size="0"/>
+			</led>
+			<led y="+10" x="+1*[SPACING]" width="[LED_WIDTH]" height="[LED_HEIGHT]">
+				<off color="deckcolordark" radius="0" border="black" border_size="0"/>
+				<on color="deckcolorbright" radius="0" border="black" border_size="0"/>
+			</led>
+		</define>
+		<!-- ===================EXTRA DECK CONTROLS========================== -->
+		<define class="extra_controls">
+			<panel class="extra_knob" x="+0" y="+0">
+				<slider action="gain" dblclick="gain 50%" frommiddle="true"/>
+				<textzone>
+					<text text="GAIN"/>
+				</textzone>
+			</panel>
+			<button class="button2" action="pfl" sysicon="headphones" x="+110" y="+10"/>
+			<group name="key_area" x="+200" y="+15">
+				<panel class="up_down_num" x="+0" y="+0">
+					<button action="key_move -1"/>
+					<button action="key_match_button">
+						<text action="get_key_modifier_text"/>
+					</button>
+					<button action="key_move +1"/>
+				</panel>
+				<textzone action="setting 'keyDisplay'">
+					<pos x="+155" y="-15"/>
+					<size width="70" height="40"/>
+					<text fontsize="30" color="deckcolorbright" weight="bold" align="right" action="get_key" important="true"/>
+				</textzone>
+				<button action="key_match_menu">
+					<size width="30" height="40"/>
+					<pos x="+177" y="+20"/>
+					<icon dy="+1" sysicon="chevrondown" width="28" height="28" color="textdark" colorover="textover" colordown="texton" colorselected="texton"/>
+				</button>
+			</group>
+		</define>
+		<!-- ============SAMPLER================= -->
+		<define class="sampler">
+		<!-- ================= -->
+			<sampler>
+				<pos x="+0" y="+0" width="700" height="580"/>
+			</sampler>
+			<panel class="up_down_txt" x="+0" y="+580">
+				<button action="sampler_bank -1"/>
+				<button>
+					<text action="get_sampler_bank"/>
+				</button>
+				<button action="sampler_bank +1"/>
+			</panel>
+			<button class="button_transport" action="sampler_mode +1" query="off">
+				<pos x="+100" y="1080"/>
+				<icon sysicon="sampler_mode" width="35" height="35"/>
+			</button>
+			<panel class="knob_with_2buttons" x="+300" y="1080">
+				<slider action="sampler_volume_master"/>
+				<button action="sampler_rec 'Master'">
+					<text text="REC"/>
+				</button>
+				<button action="sampler_rec 'Master' 1">
+					<text text="REC->1"/>
+				</button>
+			</panel>
+			<button class="button_transport" action="sampler_options 'sideview'" query="off">>
+				<pos x="+500" y="1080"/>
+				<text text="OPTIONS" />
+			</button>
+			<filelist source="sampler"> <!-- automix|karaoke|sidelist|sampler" -->
+				<pos x="+0" y="+640"/>
+				<size width="400" height="300"/>
+			</filelist>
+			<panel class="fxpad">
+				<pos x="+430" y="+600"/>
+			</panel>
+		<!-- ================= -->
+
+				
+
+			<button class="roundbutton" action="sampler_volume_master 100% ? sampler_volume_master 0% : sampler_volume_master 100%" query="sampler_volume_master 100% ? on : off" visibility="sampler_volume_master 0% ? false : true">
+				<Tooltip>Maximize Sampler Master Volume</Tooltip>
+				<pos x="+220+62" y="+75+120"/>
+			</button>
+			<button class="roundbutton_red" action="sampler_volume_master 100%" query="sampler_volume_master 0% ? on : off" visibility="sampler_volume_master 0%">
+				<Tooltip>Set Sampler Master Volume to maximum</Tooltip>
+				<pos x="+220+62" y="+75+120"/>
+			</button>
+			
+			<panel x="+10" y="+631" visible="var '$samplerfx' 1">	
+				
+				<button class="buttonsmall_white" bwidth="160" bheight="40" action="effect_active 'sampler'">
+					<Tooltip>Sampler Effect</Tooltip>
+					<pos x="+15" y="+283-260-20"/>
+					<text fontsize="15" action="get_effect_name 'sampler' & param_uppercase"/>
+				</button>
+				<button class="buttonsmall_white" bwidth="80" bheight="40" action="effect_select 'sampler'">
+					<tooltip>Select Sampler Effect</Tooltip>
+					<pos x="+15+160+20" y="+283-260-20" />
+					<text fontsize="14" text="SEL"/>
+				</button>
+				<button class="buttonsmall_white" bwidth="50" bheight="40" action="effect_select 'sampler' -1">
+					<tooltip>Select Previous Sampler Effect</Tooltip>
+					<pos x="+15+160+20+80+5" y="+283-260-20" />
+					<text fontsize="14" text="<"/>
+				</button>
+				<button class="buttonsmall_white" bwidth="50" bheight="40" action="effect_select 'sampler' +1">
+					<tooltip>Select Next Sampler Effect</Tooltip>
+					<pos x="+15+160+20+120+20" y="+283-260-20" />
+					<text fontsize="14" text=">"/>
+				</button>		
+			
+		
+
+				<panel class="knob_new_master" x="+15" y="+55">
+					<visual/>
+						<slider action="effect_slider 'sampler' 1"  />
+						<visual/> <visual/>
+					<textzone><text format="`get_effect_slider_shortname 'sampler' 1`\n`get_effect_slider_text 'sampler' 1`"/></textzone>
+					<button action="effect_slider_reset 'sampler' 1" query="off"></button>
+				</panel>
+				<panel class="knob_new_master" x="+15+180" y="+55" >
+					<visual/>
+						<slider action="effect_slider 'sampler' 2"  />
+						<visual/> <visual/>
+					<textzone><text format="`get_effect_slider_shortname 'sampler' 2`\n`get_effect_slider_text 'sampler' 2`"/></textzone>
+					<button action="effect_slider_reset 'sampler' 2" query="off"></button>
+				</panel>				
+			</panel>
+		</define>
+
+		<!-- ============BROWSER================= -->
+		<define class="browser">
+			<button class="button_transport">
+				<pos x="+500" y="1080"/>
+				<text text="quicklist..." />
+			</button>
+			<button class="button_transport" deck="left" action="load">
+				<pos x="+100" y="1080"/>
+				<text text="LEFT" />
+			</button>
+			<button class="button_transport" deck="right" action="load">
+				<pos x="+300" y="1080"/>
+				<text text="RIGHT" />
+			</button>
+			<browser>
+				<size width="700" height="900"/>
+				<pos x="+0" y="+0"/>
+			</browser>
+		</define>
+		<!-- ============ PITCHLOOP ================= -->
+		<define class="pitch_loop" width="180" height="960">
+			<line color="deckcolorbright" x="+0" y="-10" width="180" height="2"/>
+			<panel class="knob_with_2buttons" x="+0" y="+5">
+				<slider action="pitch" dblclick="pitch_reset 1bt" frommiddle="true"/>
+				<button action="pitch_range '8,12,16,35' +1">
+					<text action="pitch_range & param_cast 'percentage'"/>
+				</button>
+				<button action="pitch_reset 64bt" query="pitch_reset ? blink : pitch_zero 'center' ? off : on">
+					<text action="pitch & param_cast 'percentage'"/>
+				</button>
+			</panel>
+			<panel class="up_down_num" x="+28" y="+100">
+				<button action="loop_half"/>
+				<button action="loop">
+					<text action="get_loop"/>
+				</button>
+				<button action="loop_double"/>
+			</panel>
+			<button class="button1" action="loop_in" x="+0" y="+150">
+				<text text="IN"/>
+			</button>
+			<button class="button1" action="loop_options" x="+70" y="+150">
+				<size width="40"/>
+				<text text="OPT"/>
+			</button>
+			<button class="button1" action="loop_out" x="+120" y="+150">
+				<text text="OUT"/>
+			</button>
+		</define>
+		<!-- ============ AUDIOMIXER ================= -->
+		<define class="audiomixer" width="180" height="960">
+			<panel class="knob_with_2buttons" x="+0" y="+0">
+				<slider action="stem 'Vocal'" dblclick="stem 'Vocal' 50%" frommiddle="true"/>
+				<button action="effect_stems 'Vocal' toggle">
+					<text text="FX"/>
+				</button>
+				<button action="stem 'Vocal' 50%">
+					<text action="stem 'Vocal' & param_cast 'percentage'"/>
+				</button>
+			</panel>
+			<panel class="knob_with_2buttons" x="+0" y="+100">
+				<slider action="stem instru" dblclick="stem instru 50%" frommiddle="true"/>
+				<button action="effect_stems 'Instru' toggle">
+					<text text="FX"/>
+				</button>
+				<button action="stem 'Instru' 50%">
+					<text action="stem 'Instru' & param_cast 'percentage'"/>
+				</button>
+			</panel>
+			<panel class="knob_with_2buttons" x="+0" y="+100+100">
+				<slider action="stem bass" dblclick="stem bass 50%" frommiddle="true"/>
+				<button action="effect_stems 'Bass' toggle">
+					<text text="FX"/>
+				</button>
+				<button action="stem 'Bass' 50%">
+					<text action="stem 'Bass' & param_cast 'percentage'"/>
+				</button>
+			</panel>
+			<panel class="knob_with_2buttons" x="+0" y="+100+100+100">
+				<slider action="stem rhythm" dblclick="stem rhythm 50%" frommiddle="true"/>
+				<button action="effect_stems 'Rhythm' toggle">
+					<text text="FX"/>
+				</button>
+				<button action="stem 'Rhythm' 50%">
+					<text action="stem 'Rhythm' & param_cast 'percentage'"/>
+				</button>
+			</panel>
+			<group name="level" x="+0" y="920">
+				<slider orientation="round" action="level" dblclick="level 100%">
+					<pos x="+0" y="+0"/>
+					<size width="120" height="120"/>
+					<off width="110" height="110" shape="circle" color="knobcolor1" color2="knobcolor2" gradient="vertical" border="bordercolor" border_size="1"/>
+					<fader color="knobfader" width="4" height="50" radius="6" anglemin="-140" anglemax="140"/>
+					<fill width="120" height="120" radius="16" color="knobfillon" backcolor="knobfilloff"/>
+				</slider>
+				<visual type="vumeter" class="vu_meter_v" x="+125" y="+0" width="8" height="180" source="get_level_left" smooth="true"/>
+				<visual type="vumeter" class="vu_meter_v" x="+133" y="+0" width="8" height="180" source="get_level_right" smooth="true"/>
+			</group>
+		</define>
+		<!-- ============ JOGWHEEL ================= -->
+		<define class="jogwheel" placeholders="*width=320,*height=320">
+			<visual name="outerborder" x="+0" y="+0" type="circle">
+				<size width="[WIDTH]" height="[HEIGHT]"/>
+				<off border_size="2" border="black" color="mixerbackground" shape="circle"/>
+			</visual>
+			<visual name="outercircle" x="+2" y="+2" type="circle" source="song_pos 'show warning'">
+				<size width="[WIDTH]-4" height="[HEIGHT]-4"/>
+				<off color="mixerbackground" shape="circle"/>
+				<on color="deckcolor" shape="circle"/>
+				<mousecircle/>
+			</visual>
+			<slider name="dome_spinner" orientation="round" action="get_rotation" x="+10" y="+10" visibility="loaded" tooltip="">
+				<size width="[WIDTH]-20" height="[HEIGHT]-20"/>
+				<off border_size="1" border="black" color="dark" shape="circle"/>
+				<fader color="deckcolordark" width="6" height="[WIDTH]/2-25" radius="12"/>
+			</slider>
+			<slider name="dome_spinner" orientation="round" action="get_rotation" x="+10" y="+10" novisibility="loaded" tooltip="">
+				<size width="[WIDTH]-20" height="[HEIGHT]-20"/>
+				<off border_size="1" border="black" color="dark" shape="circle"/>
+				<fader color="knobfilloff" width="6" height="[WIDTH]/2-25" radius="12"/>
+			</slider>
+			<visual name="center-circle" x="+[WIDTH]/2-10" y="+[HEIGHT]/2-10" source="loaded">
+				<size width="20" height="20"/>
+				<on color="deckcolor" shape="circle"/>
+				<off color="graydark" shape="circle"/>
+			</visual>
+			<panel name="jogwheel_displays" visibility="loaded">
+				<textzone tooltip="`get_bpm 'all'`">
+					<pos x="+0" y="+70"/>
+					<size width="[WIDTH]" height="60"/>
+					<text fontsize="60" color="textdeck" align="center" weight="bold" format="%Pbpmex"/>
+				</textzone>
+				<group y="+146">
+					<textzone>
+						<pos x="+20" y="+0"/>
+						<size width="[WIDTH]/2-40" height="30"/>
+						<text fontsize="28" color="textdark" weight="" format="%Ppitch%" align="center"/>
+					</textzone>
+					<textzone>
+						<pos x="+[WIDTH]/2+20" y="+0"/>
+						<size width="[WIDTH]/2-40" height="30"/>
+						<text fontsize="28" color="textdark" weight="" format="-+%Ppitchrange%" align="center"/>
+					</textzone>
+				</group>
+				<group y="+192">
+					<textzone tooltip="">
+						<pos x="+0" y="+0"/>
+						<size width="[WIDTH]" height="50"/>
+						<text fontsize="36" color="textdark" align="center" weight="" action="get_time 'elapsed'" important="true"/>
+					</textzone>
+					<textzone tooltip="">
+						<pos x="+0" y="+42"/>
+						<size width="[WIDTH]" height="50"/>
+						<text fontsize="36" color="textoff3" align="center" weight="" action="get_time 'remain'" important="true"/>
+					</textzone>
+				</group>
+			</panel>
+			<scratch>
+				<pos x="+0" y="+0"/>
+				<size width="[WIDTH]" height="[HEIGHT]"/>
+				<mousecircle/>
+			</scratch>
+			<button class="button1" action="vinyl_mode toggle">
+				<pos x="+[WIDTH]-30" y="+[HEIGHT]-10"/>
+				<text text="SCRATCH" />
+				<!-- action="vinyl_mode 'on' ? 'yep' : 'nop'"/-->
+				<!-- eq_mid 0% ? eq_mid 50% : eq_mid 0% -->
+				 <!--param_equal `get_browsed_song 'type'` "audio"-->
+				<!--textzone action="skin_panel 'adjustbpm_area_[PANELNAME]'" tooltip="`get_bpm 'all'`" visibility="var_equal '@$spinner' 0 ? yes : has_video_mix active && skin_panel 'videomixer'"-->
+			</button>
+			<button class="button1" action="slip_mode" query="get_slip_active ? blink : slip_mode">
+				<pos x="+[WIDTH]-30" y="-20"/>
+				<text text="SLIP" />
+			</button>
+			<button class="button1" action="reverse">
+				<pos x="-20" y="-20"/>
+				<text text="REVERSE" />
+			</button>
+			<button class="button1" action="masterdeck toggle">
+				<pos x="-20" y="+[HEIGHT]-10"/>
+				<text action="masterdeck" />
+			</button>
+		</define>
+
+	<define class="waveform">
+		<size width="1920" height="45"/>
+		<rhythm y="+0" height="45"/>
+		<grid height="6" width="5" maxwidth="12">
+			<pos y1="+45-30+5" y2="+90-30+15" y3="+90-30+5" y4="+90-30+15"/>
+		</grid>
+		<gridlines width="1" color="darkgray" transparency="0.6"/>
+		<cue y="+0" height="115">
+			<mask x="307" y="0" width="15" height="15"/>
+			<text dx="+16" dy="-2" weight="bold" fontsize="13" color="deckcolor"/>
+		</cue>
+		<overlay>
+			<pos x="960" y="-2"/>
+			<size width="1" height="90" />
+			<background color="needle" shape="square" />
+		</overlay>
+	</define>
+
+	</group><!-- components -->
+
+	<!--======================WAVEFORMS======================-->
+	<logo circle="false" os="pc">
+		<pos x="0" y="0"/>
+		<size width="100" height="40"/>
+	</logo>
+	<rhythmzone mirror="true" upsidedown="false" fade="50">
+		<pos x="0" y="+0"/>
+		<size width="1920" height="90"/>
+		  <colors
+			  deck1="0" deck1_active="waveform_active1" deck1_left="waveform_passive1" 
+			  deck2="0" deck2_active="waveform_active2" deck2_right="waveform_passive2"/>  
+		<rhythm y="+0" height="90"/>
+		<grid height="6" width="5" maxwidth="12">
+			<pos y1="+0" y2="+45"/> 
+		</grid>
+		<gridlines width="1" color="darkgray" transparency="0.6"/>
+		<cue y="+0" height="115">
+			<mask x="307" y="0" width="15" height="15"/>
+			<text dx="+16" dy="-2" weight="bold" fontsize="13" color="deckcolor"/>
+		</cue>
+		<overlay>
+			<pos x="960" y="-2"/>
+			<size width="1" height="90" />
+			<background color="needle" shape="square" />
+		</overlay>
+	</rhythmzone>
+
+	<!--======================LEFT DECK======================-->
+	<deck deck="left">
+		<!--======================PANELS======================-->
+		<panel class="browser" name="browser_left" x="30" y="100" visibility="var '$left_panel' 2"/>
+		<panel class="sampler" name="sampler_left" x="30" y="100" visibility="var '$left_panel' 3"/>
+		<panel name="left_deck" x="30" y="100" visibility="var '$left_panel' 1">
+			<panel class="fxpad" x="+0" y="+0"/>
+			<panel class="jogwheel" x="+340" y="140"/>
+			<panel class="songinfo" x="+0" y="510"/>		
+			<group name="pads" x="+0" y="620">
+				<panel class="padselector" x="+0" y="+0"/>
+				<panel class="padbuttons" x="+0" y="+80"/>
+				<panel class="padparams" x="+0" y="+355"/>
+			</group>
+			<panel class="extra_controls" x="+250" y="980"/>			
+			<panel class="transport" x="+0" y="1080"/>
+		</panel>
+		<panel class="pitch_loop" x="750" y="250"/>
+		<panel class="audiomixer" x="750" y="510"/>
+	</deck>
+	<deck deck="right">
+		<group name="left_deck" x="1200">
+			<panel class="fxpad" x="+430" y="120"/>
+			<panel class="jogwheel" x="+20" y="140"/>
+			<panel class="songinfo" x="+0" y="510"/>		
+			<group name="pads" x="+0" y="620">
+				<panel class="padselector" x="+0" y="+0"/>
+				<panel class="padbuttons" x="+0" y="+80"/>
+				<panel class="padparams" x="+0" y="+355"/>
+			</group>
+			<panel class="extra_controls" x="+250" y="980"/>		4	
+			<panel class="transport" x="-90" y="1080"/>
+		</group>
+		<panel class="pitch_loop" x="1000" y="250"/>
+		<panel class="audiomixer" x="1000" y="510"/>
+	</deck>
+
+	<panel name="labels" x="930" y="220">
+		<menu> 
+			<pos x="+28" y="+14" /> 
+			<size width = "15" height = "15" /> 
+			<up shape="circle" color="#ff0000" border="" border_size="" radius="" gradient="" color2=""/> 
+			<over shape="circle" color="#ff0000" border="" border_size="" radius="" gradient="" color2=""/> 
+			<down shape="circle" color="#ff0000" border="" border_size="" radius="" gradient="" color2=""/> 
+			<item text = "Full" action = "apply_audio_config 'Lenovo FULL'" hascheck = "true" /> 
+			<item text = "Bluetooth" action = "apply_audio_config 'Lenovo BT'" hascheck = "true" /> 
+			<item text = "Laptop" action = "apply_audio_config 'Lenovo Solo'" hascheck = "true" /> 
+		</menu>
+
+		<textzone>
+			<pos x="+0" y="+30"/>
+			<size width="60" height="90"/>
+			<text align="center" valign="middle" text="PITCH"/>
+		</textzone>
+		<textzone>
+			<pos x="+0" y="+130"/>
+			<size width="60" height="90"/>
+			<text align="center" valign="middle" text="LOOP"/>
+		</textzone>
+		<textzone>
+			<pos x="+0" y="+285"/>
+			<size width="60" height="90"/>
+			<text align="center" valign="middle" text="VOCAL"/>
+		</textzone>
+		<textzone>
+			<pos x="+0" y="+390"/>
+			<size width="60" height="90"/>
+			<text align="center" valign="middle" text="INSTRU"/>
+		</textzone>
+		<textzone>
+			<pos x="+0" y="+485"/>
+			<size width="60" height="90"/>
+			<text align="center" valign="middle" text="BASS"/>
+		</textzone>
+		<textzone>
+			<pos x="+0" y="+590"/>
+			<size width="60" height="90"/>
+			<text align="center" valign="middle" text="RHYTHM"/>
+		</textzone>
+	</panel>
+
+	<square border="1" border_color="black" color="faderbackground">
+		<pos x="750" y="1080"/>
+		<size width="420" height="90"/>
+	</square>
+	<slider orientation="2d" 
+		    action="crossfader" direction="right" 
+			action2="eq_crossfader_low" direction2="up">
+		<tooltip/>
+		<pos x="750" y="1080"/>
+		<size width="420" height="90"/>
+	<!-- 	<fill color="blue" backcolor="#232323"/> -->
+		<fader>
+			<background color="#334477"/>
+			<size width="30" height="30"/>
+			<on  color="gray" shape="square" border="bordercolor" border_size="1" radius="3" /> 
+			<off color="faderinoff" shape="square" border="bordercolor" border_size="1" radius="3" />
+		</fader>
+	</slider>
+	
+	<panel name="both_decks" x="750" y="90" width="400" height="200">
+		<visual type="vumeter" class="vu_meter_h" x="+0" y="+0" width="180" height="10" source="get_vu_meter" smooth="true"/>
+		<!-- <button class="button1" action="show_window 'browserWindow'" x="+0" y="+0">
+			<text text="BROWSER"/>
+		</button> 
+					<button action="set 'videoview' 1" query="var 'videoview' 1">
+				<Tooltip>SHOW VIDEO WINDOW</Tooltip>
+				<pos x="+13" y="+303"/>
+				<size width="53" height="53"/>
+				<off x="626" y="1381"/>
+				<selected x="626" y="1451" />
+			</button>
+			<button action="toggle '@$coverjog'" >
+				<Tooltip>SHOW COVER ON JOG</Tooltip>
+				<pos x="+13+329" y="+304"/>
+				<size width="53" height="53"/>
+				<off x="626" y="1591"/>
+				<selected x="626" y="1521" />
+			</button>
+			
+			<button action="vinyl_mode">
+				<Tooltip>VINYL MODE</Tooltip>
+				<pos x="+13" y="+0"/>
+				<size width="53" height="53"/>
+				<off x="700" y="1381"/>
+				<selected x="700" y="1451" />
+			</button>
+			<button action="slip_mode" query="get_slip_active ? blink : slip_mode">
+
+		
+		-->
+		<button class="button1" action="set '$left_panel' 1" x="+0" y="+0">
+			<text text="DECK"/>
+		</button>
+		<button class="button1" action="set '$left_panel' 2" x="+0" y="+50">
+			<text text="BROWSER"/>
+		</button>
+		<button class="button1" action="set '$left_panel' 3" x="+0" y="+100" 
+ 				query="sampler_used ? blink : var '$left_panel' 3 ? on">
+			<text text="SAMPLER"/>
+		</button>
+		<panel class="extra_knob" x="+95" y="+50">
+			<slider action="headphone_volume"/>
+			<textzone>
+				<text text="CUE VOL"/>
+			</textzone>
+		</panel>
+		<panel class="extra_knob" x="+185" y="+50">
+			<slider action="headphone_mix"/>
+			<textzone>
+				<text text="CUE MIX"/>
+			</textzone>
+		</panel>
+		<panel class="extra_knob" x="+275" y="+50">
+			<slider action="master_volume"/>
+			<textzone>
+				<text text="MASTER"/>
+			</textzone>
+		</panel>
+		<button class="button1" action="set 'right_panel' 1" x="+370" y="+0">
+			<text text="DECK"/>
+		</button>
+		<button class="button1" action="set 'right_panel' 2" x="+370" y="+50">
+			<text text="BROWSER"/>
+		</button>
+		<button class="button1" action="set 'right_panel' 3" x="+370" y="+100" 
+ 				query="sampler_used ? blink : var 'right_panel' 3 ? on">
+			<text text="SAMPLER"/>
+		</button>
+	</panel>
+	
+	<panel name="audiomixer" x="990" y="120" width="180" height="960" visibility="false">
+		<deck deck="right">
+			<line color="deckcolorbright" x="+0" y="-10" width="180" height="2"/>
+			<panel class="knob_with_2buttons" x="+0" y="+0">
+				<slider action="stem 'Vocal'" dblclick="stem 'Vocal' 50%" frommiddle="true"/>
+				<button action="effect_stems 'Vocal' toggle">
+					<text text="FX"/>
+				</button>
+				<button action="stem 'Vocal' 50%">
+					<text action="stem 'Vocal' & param_cast 'percentage'"/>
+				</button>
+			</panel>
+			<panel class="knob_with_2buttons" x="+0" y="+100">
+				<slider action="stem instru" dblclick="stem instru 50%" frommiddle="true"/>
+				<button action="effect_stems 'Instru' toggle">
+					<text text="FX"/>
+				</button>
+				<button action="stem 'Instru' 50%">
+					<text action="stem 'Instru' & param_cast 'percentage'"/>
+				</button>
+			</panel>
+			<panel class="knob_with_2buttons" x="+0" y="+100+100">
+				<slider action="stem bass" dblclick="stem bass 50%" frommiddle="true"/>
+				<button action="effect_stems 'Bass' toggle">
+					<text text="FX"/>
+				</button>
+				<button action="stem 'Bass' 50%">
+					<text action="stem 'Bass' & param_cast 'percentage'"/>
+				</button>
+			</panel>
+			<panel class="knob_with_2buttons" x="+0" y="+100+100+100">
+				<slider action="stem rhythm" dblclick="stem rhythm 50%" frommiddle="true"/>
+				<button action="effect_stems 'Rhythm' toggle">
+					<text text="FX"/>
+				</button>
+				<button action="stem 'Rhythm' 50%">
+					<text action="stem 'Rhythm' & param_cast 'percentage'"/>
+				</button>
+			</panel>
+
+			<panel class="volume_fader" x="+0" y="+70+110+110+110+110">
+				<slider action="gain" dblclick="gain 100%" frommiddle="true"/>
+				<textzone>
+					<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]/2"/>
+					<text text="GAIN" align="center" valign="middle"/>
+				</textzone>
+				<textzone>
+					<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]/2"/>
+					<text text="PFL" align="center" valign="middle"/>
+				</textzone>
+				<button action="filter_selectcolorfx">
+					<text fontsize="12" color="textdark" colorover="textover" colordown="textover" weight="" align="center" text="FX" localize="true" important="true"/>
+				</button>
+			</panel>
+			<visual type="vumeter" class="vu_meter_v" x="+0" y="+70+110+110+110+110" width="8" height="180" source="get_level_left" smooth="true"/>
+			<visual type="vumeter" class="vu_meter_v" x="+10" y="+70+110+110+110+110" width="8" height="180" source="get_level_right" smooth="true"/>
+			<button class="button_deck_inverted" x="+18" y="+100-36" width="43" height="26" action="pfl" sysicon="headphones" iconsize="21"/>
+		</deck>
+	</panel>
+	<oninit action="setting_setdefault skinWaveformType 'shapes'"/>
+	<oninit action="setting_setdefault coverflow 'no'"/>
+	<!-- oninit action="setting_setdefault browserPadding 25%"/ -->
+	<oninit action="setting_setdefault EqMode 'modernEQ'"/>
+	<oninit action="setting_setdefault autoBPMMatch 'smart'"/>
+	<!-- oninit action="setting_setdefault autoKey on"/ -->
+	<oninit action="setting_setdefault smartPlay off"/>
+	<oninit action="setting_setdefault autoPitchLock off"/>
+
+	<oninit action="set '$left_panel' 1"/>
+	<oninit action="set '$right_panel' 1"/>
+</skin>
+
