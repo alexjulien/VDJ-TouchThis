@@ -505,7 +505,7 @@
 		<!--======================TRANSPORT======================-->
 		<group name="transport">
 			<!--======================BEATCOUNTER======================-->
-			<define class="beatcounter" placeholders="*width=45,*height=45,*fontsize=12">
+			<define class="beatcounter" placeholders="*width=80,*height=80,*fontsize=22">
 				<visual type="circle" source="get_beat_counter">
 					<pos x="+0" y="+0"/>
 					<size width="[WIDTH]" height="[HEIGHT]"/>
@@ -544,16 +544,16 @@
 				<button class="button_transport" x="+[WIDTH]" y="+0" action="cue_button" textaction="cue_button"/>
 				<button class="button_transport" x="+[WIDTH]+[WIDTH]" y="+0" sysicon="play_button" iconsize="[HEIGHT]*2/3" action="play_button"/>				
 				<panel class="beatcounter">
-					<pos x="[HEIGHT]/2+[WIDTH]+[WIDTH]+[WIDTH]+" y="+0"/>
+					<pos x="[HEIGHT]/4+[WIDTH]+[WIDTH]+[WIDTH]+" y="+5"/>
 				</panel>
 			</define>
 			<define class="transport" classdeck="right" placeholders="*width=205,*height=90">
 				<panel class="beatcounter">
-					<pos x="+15" y="+0"/>
+					<pos x="+0" y="+5"/>
 				</panel>
-				<button class="button_transport" x="+[HEIGHT]" y="+0" sysicon="play_button" iconsize="[HEIGHT]*2/3" action="play_button"/>
-				<button class="button_transport" x="+[HEIGHT]+[WIDTH]" y="+0" action="cue_button" textaction="cue_button"/>
-				<button class="button_transport" x="+[HEIGHT]+[WIDTH]+[WIDTH]" y="+0" action="sync" text="SYNC" localize="true"/>
+				<button class="button_transport" x="+[HEIGHT]+5" y="+0" sysicon="play_button" iconsize="[HEIGHT]*2/3" action="play_button"/>
+				<button class="button_transport" x="+[HEIGHT]+[WIDTH]+5" y="+0" action="cue_button" textaction="cue_button"/>
+				<button class="button_transport" x="+[HEIGHT]+[WIDTH]+[WIDTH]+5" y="+0" action="sync" text="SYNC" localize="true"/>
 			</define>
 		</group>
 		<!--======================PADS======================-->
@@ -911,23 +911,97 @@
 		</define>
 
 		<!-- ============BROWSER================= -->
-		<define class="browser">
-			<button class="button_transport">
-				<pos x="+500" y="1080"/>
-				<text text="quicklist..." />
-			</button>
-			<button class="button_transport" deck="left" action="load">
-				<pos x="+100" y="1080"/>
-				<text text="LEFT" />
-			</button>
-			<button class="button_transport" deck="right" action="load">
-				<pos x="+300" y="1080"/>
-				<text text="RIGHT" />
-			</button>
+		<define class="browser" classdeck="left">
 			<browser>
 				<size width="700" height="900"/>
 				<pos x="+0" y="+0"/>
 			</browser>
+			<button class="button_transport" deck="left" action="load">
+				<pos x="+505" y="1080"/>
+				<size width="95"/>
+				<text text="LEFT" />
+			</button>
+			<button class="button_transport" deck="right" action="load">
+				<pos x="+610" y="1080"/>
+				<size width="95"/>
+				<text text="RIGHT" />
+			</button>
+			<textzone>
+				<pos x="+465" y="1080"/>
+				<size width="30" height="95"/>
+				<text align="center" valign="middle" text="DECK"/>
+			</textzone>
+			<button class="button_transport" action="set 'deck_panel' 1">
+				<pos x="+355" y="1080"/>
+				<size width="95"/>
+				<text text="CLOSE" />
+			</button>
+			<textzone>
+				<pos x="+312" y="1080"/>
+				<size width="35" height="95"/>
+				<text align="center" valign="middle" text="SIDELIST" multiline="yes"/>
+			</textzone>
+			<button class="button_transport" action="sidelist_add">
+				<pos x="+210" y="1080"/>
+				<size width="95"/>
+				<text text="ADD" />
+			</button>
+			<button class="button_transport" action="sidelist_load">
+				<pos x="+105" y="1080"/>
+				<size width="95"/>
+				<text text="LOAD" />
+			</button>
+			<button class="button_transport" action="sidelist_load 'append'">
+				<pos x="+0" y="1080"/>
+				<size width="95"/>
+				<text text="APPEND" />
+			</button>
+		</define>
+		<define class="browser" classdeck="right">
+			<browser>
+				<size width="700" height="900"/>
+				<pos x="+0" y="+0"/>
+			</browser>
+			<button class="button_transport" deck="left" action="load">
+				<pos x="+0" y="1080"/>
+				<size width="95"/>
+				<text text="LEFT" />
+			</button>
+			<button class="button_transport" deck="right" action="load">
+				<pos x="+105" y="1080"/>
+				<size width="95"/>
+				<text text="RIGHT" />
+			</button>
+			<textzone>
+				<pos x="+210" y="1080"/>
+				<size width="30" height="95"/>
+				<text align="center" valign="middle" text="DECK"/>
+			</textzone>
+			<button class="button_transport" action="set 'deck_panel' 1">
+				<pos x="+250" y="1080"/>
+				<size width="95"/>
+				<text text="CLOSE" />
+			</button>
+			<textzone>
+				<pos x="+355" y="1080"/>
+				<size width="35" height="95"/>
+				<text align="center" valign="middle" text="SIDELIST" multiline="yes"/>
+			</textzone>
+			<button class="button_transport" action="sidelist_add">
+				<pos x="+400" y="1080"/>
+				<size width="95"/>
+				<text text="ADD" />
+			</button>
+			<button class="button_transport" action="sidelist_load">
+				<pos x="+505" y="1080"/>
+				<size width="95"/>
+				<text text="LOAD" />
+			</button>
+			<button class="button_transport" action="sidelist_load 'append'">
+				<pos x="+610" y="1080"/>
+				<size width="95"/>
+				<text text="APPEND" />
+			</button>
 		</define>
 		<!-- ============PITCHLOOP================= -->
 		<define class="pitch_loop" width="180" height="960">
@@ -962,6 +1036,31 @@
 				<text text="OUT"/>
 			</button>
 		</define>
+
+
+
+			<define class="knob_L" placeholders="*size=140,*center=80"> 
+				<slider frommiddle="false" orientation="circle" relative="no" >
+				<!-- LEVEL -->
+					<pos x="+0" y="+0"/>
+					<size width="[SIZE]" height="[SIZE]"/>
+					<circle direction="cw" anglemin="-140" anglemax="140"/>
+					<on shape="circle" color="deckcolorbright"  />
+					<off shape="circle" color="knobfader2"  />
+				</slider>
+				<button>
+				<!-- CIRCLE CENTER -->
+					<pos x="+[SIZE]-[CENTER]/2" y="+[SIZE]-[CENTER]/2"/>
+					<size width="[CENTER]" height="[CENTER]"/>
+					<off shape="circle" color="display" border_size="3" border="knobfader2"/>
+					<text fontsize="18" weight="bold" color="white" align="center" valign="center"/>
+				</button>
+<!-- 				<textzone>
+					<pos x="+[SIZE]-[CENTER]/2" y="+[SIZE]-[CENTER]/2"/>
+					<size width="[CENTER]" height="[CENTER]"/>
+					<text fontsize="18" weight="bold" color="white" align="center"/>
+				</textzone> -->
+			</define> 		
 		<!-- ============AUDIOMIXER================= -->
 		<define class="audiomixer" width="180" height="960">
 			<panel class="knob_with_2buttons" x="+0" y="+0">
@@ -1000,15 +1099,28 @@
 					<text action="stem 'Rhythm' & param_cast 'percentage'"/>
 				</button>
 			</panel>
-			<group name="level" x="+0" y="920">
-				<slider orientation="round" action="level" dblclick="level 100%">
+			
+
+			<panel class="knob_L" name="level" x="+0" y="920">
+<!-- 			
+					<off width="[KNOB_WIDTH]-10" height="[KNOB_HEIGHT]-10" shape="circle" color="knobcolor1" color2="knobcolor2" gradient="vertical" border="bordercolor" border_size="1"/>
+					<fader color="knobfader" width="4" height="[KNOB_HEIGHT]/2-10" radius="6" anglemin="-140" anglemax="140"/>
+					<fill width="[KNOB_WIDTH]" height="[KNOB_HEIGHT]" radius="16" color="knobfillon" backcolor="knobfilloff"/>
+
+				<slider orientation="circle" action="level" dblclick="level 100%">
 					<pos x="+0" y="+0"/>
 					<size width="120" height="120"/>
 					<off width="110" height="110" shape="circle" color="knobcolor1" color2="knobcolor2" gradient="vertical" border="bordercolor" border_size="1"/>
 					<fader color="knobfader" width="4" height="50" radius="6" anglemin="-140" anglemax="140"/>
 					<fill width="120" height="120" radius="16" color="knobfillon" backcolor="knobfilloff"/>
+					<circle x="0" y="0" anglemin="-140" anglemax="140" sectsize="20" direction="cw"/>
 				</slider>
-			</group>
+ -->			
+				<slider action="level"/>
+				<button>
+					<text action="level"/>
+				</button>
+			</panel>
 		</define>
 		<!-- ============ JOGWHEEL ================= -->
 		<define class="jogwheel" placeholders="*width=320,*height=320">
@@ -1165,26 +1277,30 @@
 			</visual>
 		</panel>
 		<!--======================PANEL BUTTONS======================-->
-		<button class="button1" action="set '$left_panel' 1" x="+0" y="+0">
-			<text text="DECK"/>
-		</button>
-		<button class="button1" action="set '$left_panel' 2" x="+0" y="+53">
-			<text text="BROWSER"/>
-		</button>
-		<button class="button1" action="set '$left_panel' 3" x="+0" y="+105" 
- 				query="sampler_used ? blink : var '$left_panel' 3 ? on">
-			<text text="SAMPLER"/>
-		</button>
-		<button class="button1" action="set '$right_panel' 1" x="+375" y="+0">
-			<text text="DECK"/>
-		</button>
-		<button class="button1" action="set '$right_panel' 2" x="+375" y="+53">
-			<text text="BROWSER"/>
-		</button>
-		<button class="button1" action="set '$right_panel' 3" x="+375" y="+105" 
- 				query="sampler_used ? blink : var 'right_panel' 3 ? on">
-			<text text="SAMPLER"/>
-		</button>
+		<deck deck="left">
+			<button class="button1" action="set 'deck_panel' 1" x="+0" y="+0">
+				<text text="DECK"/>
+			</button>
+			<button class="button1" action="set 'deck_panel' 2" x="+0" y="+53">
+				<text text="BROWSER"/>
+			</button>
+			<button class="button1" action="set 'deck_panel' 3" x="+0" y="+105" 
+					query="sampler_used ? blink : var 'deck_panel' 3 ? on">
+				<text text="SAMPLER"/>
+			</button>
+		</deck>
+		<deck deck="right">
+			<button class="button1" action="set 'deck_panel' 1" x="+375" y="+0">
+				<text text="DECK"/>
+			</button>
+			<button class="button1" action="set 'deck_panel' 2" x="+375" y="+53">
+				<text text="BROWSER"/>
+			</button>
+			<button class="button1" action="set 'deck_panel' 3" x="+375" y="+105" 
+					query="sampler_used ? blink : var 'right_panel' 3 ? on">
+				<text text="SAMPLER"/>
+			</button>
+		</deck>
 		<!--======================MASTER KNOBS======================-->
 		<panel class="extra_knob" x="+90" y="+45">
 			<slider action="headphone_volume"/>
@@ -1208,9 +1324,7 @@
 
 	<!--======================LEFT DECK======================-->
 	<deck deck="left">
-		<panel class="browser" name="browser_left" x="30" y="100" visibility="var '$left_panel' 2"/>
-		<panel class="sampler" name="sampler_left" x="30" y="100" visibility="var '$left_panel' 3"/>
-		<panel name="left_deck" x="30" y="105" visibility="var '$left_panel' 1">
+		<panel name="left_deck" x="30" y="105" visibility="var 'deck_panel' 1">
 			<panel class="fxpad" x="+0" y="+0"/>
 			<panel class="jogwheel" x="+330" y="+0"/>
 			<panel class="songinfo" x="+0" y="510"/>		
@@ -1224,12 +1338,12 @@
 		</panel>
 		<panel class="pitch_loop" x="750" y="255"/>
 		<panel class="audiomixer" x="750" y="510"/>
+		<panel class="browser" name="browser_left" x="30" y="100" visibility="var 'deck_panel' 2"/>
+		<panel class="sampler" name="sampler_left" x="30" y="100" visibility="var 'deck_panel' 3"/>
 	</deck>
 	<!--======================RIGHT DECK======================-->
 	<deck deck="right">
-		<panel class="browser" name="browser_right" x="1200" y="100" visibility="var '$right_panel' 2"/>
-		<panel class="sampler" name="sampler_right" x="1200" y="100" visibility="var '$right_panel' 3"/>
-		<panel name="right_deck" x="1200" y="105" visibility="var '$right_panel' 1">
+		<panel name="right_deck" x="1200" y="105" visibility="var 'deck_panel' 1">
 			<panel class="fxpad" x="+430" y="+0"/>
 			<panel class="jogwheel" x="+20" y="+0"/>
 			<panel class="songinfo" x="+0" y="510"/>		
@@ -1243,6 +1357,8 @@
 		</panel>
 		<panel class="pitch_loop" x="1000" y="255"/>
 		<panel class="audiomixer" x="1000" y="510"/>
+		<panel class="browser" name="browser_right" x="1200" y="100" visibility="var 'deck_panel' 2"/>
+		<panel class="sampler" name="sampler_right" x="1200" y="100" visibility="var 'deck_panel' 3"/>
 	</deck>
 
 	<!--======================LABELS & MENU======================-->
@@ -1261,6 +1377,8 @@
 			<item text = "Minimize" action = "minimize" hascheck = "false" />
 			<item text = "Maximize" action = "maximize" hascheck = "false" />
 			<item text = "Exit" action = "close" hascheck = "false" />
+			<item text="-"/>
+			<item text = "Vars" action = "var_list" hascheck = "false" />
 		</menu>
 
 		<textzone>
@@ -1301,19 +1419,31 @@
 	</panel>
 
 	<!--======================CROSSFADER======================-->
-	<panel name="crossfader" x="750" y="1020">
-		<button class="button1" x="+180" y="+0"
-		        action="crossfader 50% & eq_crossfader_low 50%"/>
-		<square border="1" border_color="black" color="faderbackground">
-			<pos x="+0" y="+60"/>
-			<size width="420" height="90"/>
+	<panel name="crossfader" x="750" y="1040">
+		<button class="button1" x="+0" y="+0"
+		        action="toggle '$crossfadertemp'">
+			<text text="TEMP"/>
+		</button>
+		<button class="button1" x="+182" y="+0"
+		        action="crossfader 50% & eq_crossfader_low 50%">
+			<text text="ZERO"/>
+		</button>
+		<button class="button1" x="+375" y="+0"
+		        action="shift">
+			<text text="shift"/>
+		</button>
+
+<!-- 		"smooth", "full", " Scratch ", "cut"
+ -->		<square border="1" border_color="black" color="faderbackground">
+			<pos x="+0" y="+40"/>
+			<size width="435" height="90"/>
 		</square>
 		<slider orientation="2d" 
-				action="crossfader" direction="right" 
-				action2="eq_crossfader_low" direction2="up">
+				action="var '$crossfadertemp' ? crossfader while_pressed : crossfader " direction="right" 
+				action2="var '$crossfadertemp' ? eq_crossfader_low while_pressed : eq_crossfader_low" direction2="up">
 			<tooltip/>
-			<pos x="+0" y="+60"/>
-			<size width="420" height="90"/>
+			<pos x="+0" y="+40"/>
+			<size width="435" height="90"/>
 			<fader>
 				<background color="#334477"/>
 				<size width="30" height="30"/>
@@ -1324,8 +1454,9 @@
 	</panel>
 
 	<!--======================INIT======================-->
-	<oninit action="set '$left_panel' 1"/>
-	<oninit action="set '$right_panel' 1"/>
+	<oninit action="set 'deck_panel' 1" deck="left"/>
+	<oninit action="set 'deck_panel' 1" deck="right"/>
+	<oninit action="set '$crosseq' 1"/>
 	<oninit action="setting_setdefault skinWaveformType 'shapes'"/>
 	<oninit action="setting_setdefault coverflow 'no'"/>
 	<oninit action="setting_setdefault EqMode 'modernEQ'"/>
