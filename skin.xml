@@ -287,7 +287,7 @@
 				<off shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
 				<over shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
 				<down shape="square" color="deckcolor" border="bordercolor" border_size="1" radius="5"/>
-				<text fontsize="12" color="textdark" colorover="textover" colordown="textover" weight="" align="center" localize="true" important="true"/>
+				<text fontsize="12" color="textover" colorover="textdark" colordown="textover" weight="" align="center" localize="true" important="true"/>
 				<icon sysicon="[SYSICON]" coloroff="textdark" colorover="textover" colordown="texton" colorselected="texton" width="20" height="20"/>
 			</define>
 			<define class="button2" placeholders="*button_width=60,*button_height=60,sysicon">
@@ -349,24 +349,48 @@
 			</define>
 		</group>
 		<group name="knobs">
+		<define class="knob_Mc" placeholders="*size=90,*center=40"> 
+			<line x="+[SIZE]/2" y="+0" width="3" height="[SIZE]-[CENTER]/2" color="deckcolorbright" />
+			<slider frommiddle="true" orientation="circle" relative="no" >
+				<pos x="+0" y="+0"/>
+				<size width="[SIZE]" height="[SIZE]"/>
+				<circle direction="cw" anglemin="-140" anglemax="140" />
+				<on shape="circle" color="deckcolorbright"  />
+				<up x="0" y="1200" />
+			</slider>
+			<button>
+				<pos x="+[SIZE]-[CENTER]/2" y="+[SIZE]-[CENTER]/2"/>
+				<size width="[CENTER]" height="[CENTER]"/>
+				<off shape="circle" color="display" border_size="3" border="deckcolorbright"/>
+				<text fontsize="12" weight="normal" color="texton" align="center" valign="center"/>
+			</button>
+			<textzone>
+				<pos x="+0" y="+[SIZE]-14"/>
+				<size width="[SIZE]" height="12"/>
+				<text align="center" color="texton" fontsize="10" valign="middle"/>
+			</textzone>
+		</define> 		
+		<define class="knob_L" placeholders="*size=140,*center=80"> 
+			<slider frommiddle="false" orientation="circle" relative="no" >
+				<pos x="+0" y="+0"/>
+				<size width="[SIZE]" height="[SIZE]"/>
+				<circle direction="cw" anglemin="-140" anglemax="140"/>
+				<on shape="circle" color="deckcolorbright"  />
+				<up x="90" y="1200" />
+			</slider>
+			<button>
+				<pos x="+[SIZE]-[CENTER]/2" y="+[SIZE]-[CENTER]/2"/>
+				<size width="[CENTER]" height="[CENTER]"/>
+				<off shape="circle" color="display" border_size="3" border="deckcolorbright"/>
+				<text fontsize="18" weight="normal" color="textover" align="center" valign="center"/>
+			</button>
+			<textzone>
+				<pos x="+0" y="+[SIZE]-18"/>
+				<size width="[SIZE]" height="12"/>
+				<text align="center" color="texton" fontsize="10" valign="middle"/>
+			</textzone>
+		</define> 
 			<define class="knob_with_2buttons_" classdeck="left" placeholders="*knob_width=90,*knob_height=90,*button_width=60,*button_height=35">
-				<button>
-					<up border="0" color="display" radius="5"/>
-					<pos x="+0" y="+0"/>
-					<size width="[BUTTON_WIDTH]+[KNOB_WIDTH]+30" height="[KNOB_HEIGHT]/2"/>
-				</button>
-				<slider orientation="round">
-					<pos x="+[BUTTON_WIDTH]+20" y="+0"/>
-					<size width="[KNOB_WIDTH]" height="[KNOB_HEIGHT]"/>
-					<off width="[KNOB_WIDTH]-10" height="[KNOB_HEIGHT]-10" shape="circle" color="knobcolor1" color2="knobcolor2" gradient="vertical" border="bordercolor" border_size="1"/>
-					<fader color="knobfader" width="4" height="[KNOB_HEIGHT]/2-10" radius="6" anglemin="-140" anglemax="140"/>
-					<fill width="[KNOB_WIDTH]" height="[KNOB_HEIGHT]" radius="16" color="knobfillon" backcolor="knobfilloff"/>
-				</slider>
-				<button class="button1">
-					<pos x="+0" y="+0"/>
-				</button>
-			</define>
-			<define class="knob_with_2buttons" classdeck="left" placeholders="*knob_width=90,*knob_height=90,*button_width=60,*button_height=35">
 				<slider orientation="round">
 					<pos x="+[BUTTON_WIDTH]+20" y="+0"/>
 					<size width="[KNOB_WIDTH]" height="[KNOB_HEIGHT]"/>
@@ -381,7 +405,29 @@
 					<pos x="+0" y="+[BUTTON_HEIGHT]+10"/>
 				</button>
 			</define>
+			<define class="knob_with_2buttons" classdeck="left" placeholders="*knob_width=90,*knob_height=90,*button_width=60,*button_height=35">
+				<panel class="knob_Mc">
+					<pos x="+[BUTTON_WIDTH]+20" y="+0"/>
+				</panel>
+				<button class="button1">
+					<pos x="+0" y="+0"/>
+				</button>
+				<button class="button1">
+					<pos x="+0" y="+[BUTTON_HEIGHT]+10"/>
+				</button>
+			</define>
 			<define class="knob_with_2buttons" classdeck="right" placeholders="*knob_width=90,*knob_height=90,*button_width=60,*button_height=35">
+				<panel class="knob_Mc">
+					<pos x="+10" y="+0"/>
+				</panel>
+				<button class="button1">
+					<pos x="+[KNOB_WIDTH]+30" y="+0"/>
+				</button>
+				<button class="button1">
+					<pos x="+[KNOB_WIDTH]+30" y="+[BUTTON_HEIGHT]+10"/>
+				</button>
+
+<!--
 				<slider orientation="round">
 					<pos x="+10" y="+0"/>
 					<size width="[KNOB_WIDTH]" height="[KNOB_HEIGHT]"/>
@@ -390,11 +436,9 @@
 					<fill width="[KNOB_WIDTH]" height="[KNOB_HEIGHT]" radius="16" color="knobfillon" backcolor="knobfilloff"/>
 				</slider>
 				<button class="button1">
-					<pos x="+[KNOB_WIDTH]+30" y="+0"/>
 				</button>
 				<button class="button1">
-					<pos x="+[KNOB_WIDTH]+30" y="+[BUTTON_HEIGHT]+10"/>
-				</button>
+				</button> -->
 			</define>
 			<define class="volume_fader" classdeck="left" placeholders="*knob_width=30,*knob_height=180,*button_width=60,*button_height=60">
 				<slider orientation="round">
@@ -1007,6 +1051,24 @@
 		<define class="pitch_loop" width="180" height="960">
 			<line color="deckcolorbright" x="+0" y="+0" width="180" height="2"/>
 			<panel class="knob_with_2buttons" x="+0" y="+15">
+				<panel>
+					<slider action="pitch" dblclick="pitch_reset 1bt"/>
+					<textzone>
+						<text text="PITCH"/>
+					</textzone>
+					<button action="pitch_reset 1bt">
+						<text format="%Ppitch" />
+					</button>
+				</panel>
+				<button action="pitch_range '8,16,32' +1">
+					<text action="pitch_range & param_cast 'percentage'"/>
+				</button>
+				<button action="pitch_reset 64bt" query="pitch_reset ? blink : pitch_zero 'center' ? off : on">
+					<text text="RESET..."/>
+				</button>
+			</panel>
+<!--
+
 				<slider action="pitch" dblclick="pitch_reset 1bt" frommiddle="true"/>
 				<button action="pitch_range '8,12,16,35' +1">
 					<text action="pitch_range & param_cast 'percentage'"/>
@@ -1014,7 +1076,7 @@
 				<button action="pitch_reset 64bt" query="pitch_reset ? blink : pitch_zero 'center' ? off : on">
 					<text format="%Ppitch"/>
 				</button>
-			</panel>
+				-->
 			<button class="button1" action="loop_half" x="+0" y="+120">
 				<text text="-"/>
 			</button>
@@ -1036,90 +1098,84 @@
 				<text text="OUT"/>
 			</button>
 		</define>
-
-
-
-			<define class="knob_L" placeholders="*size=140,*center=80"> 
-				<slider frommiddle="false" orientation="circle" relative="no" >
-				<!-- LEVEL -->
-					<pos x="+0" y="+0"/>
-					<size width="[SIZE]" height="[SIZE]"/>
-					<circle direction="cw" anglemin="-140" anglemax="140"/>
-					<on shape="circle" color="deckcolorbright"  />
-					<off shape="circle" color="knobfader2"  />
-				</slider>
-				<button>
-				<!-- CIRCLE CENTER -->
-					<pos x="+[SIZE]-[CENTER]/2" y="+[SIZE]-[CENTER]/2"/>
-					<size width="[CENTER]" height="[CENTER]"/>
-					<off shape="circle" color="display" border_size="3" border="knobfader2"/>
-					<text fontsize="18" weight="bold" color="white" align="center" valign="center"/>
-				</button>
-<!-- 				<textzone>
-					<pos x="+[SIZE]-[CENTER]/2" y="+[SIZE]-[CENTER]/2"/>
-					<size width="[CENTER]" height="[CENTER]"/>
-					<text fontsize="18" weight="bold" color="white" align="center"/>
-				</textzone> -->
-			</define> 		
 		<!-- ============AUDIOMIXER================= -->
 		<define class="audiomixer" width="180" height="960">
 			<panel class="knob_with_2buttons" x="+0" y="+0">
-				<slider action="stem 'Vocal'" dblclick="stem 'Vocal' 50%" frommiddle="true"/>
+				<panel>
+					<slider action="stem 'Vocal'" dblclick="stem 'Vocal' 50%"/>
+					<textzone>
+						<text text="VOCAL"/>
+					</textzone>
+					<button action="stem 'Vocal' 0% while_pressed">
+						<text action="stem 'Vocal' & param_multiply 200 & param_cast 'integer'" />
+					</button>
+				</panel>
 				<button action="effect_stems 'Vocal' toggle">
 					<text text="FX"/>
 				</button>
 				<button action="stem 'Vocal' 50%" query="stem 'Vocal' 50% ? false : true">
-					<text action="stem 'Vocal' & param_cast 'percentage'"/>
+					<text text="RESET"/>
 				</button>
 			</panel>
 			<panel class="knob_with_2buttons" x="+0" y="+100">
-				<slider action="stem instru" dblclick="stem instru 50%" frommiddle="true"/>
+				<panel>
+					<slider action="stem 'Instru'" dblclick="stem 'Instru' 50%"/>
+					<textzone>
+						<text text="INSTRU"/>
+					</textzone>
+					<button action="stem 'Instru' 0% while_pressed">
+						<text action="stem 'Instru' & param_multiply 200 & param_cast 'integer'" />
+					</button>
+				</panel>
 				<button action="effect_stems 'Instru' toggle">
 					<text text="FX"/>
 				</button>
 				<button action="stem 'Instru' 50%" query="stem 'Instru' 50% ? false : true">
-					<text action="stem 'Instru' & param_cast 'percentage'"/>
+					<text text="RESET"/>
 				</button>
 			</panel>
 			<panel class="knob_with_2buttons" x="+0" y="+100+100">
-				<slider action="stem bass" dblclick="stem bass 50%" frommiddle="true"/>
+				<panel>
+					<slider action="stem 'Bass'" dblclick="stem 'Bass' 50%"/>
+					<textzone>
+						<text text="BASS"/>
+					</textzone>
+					<button action="stem 'Bass' 0% while_pressed">
+						<text action="stem 'Bass' & param_multiply 200 & param_cast 'integer'" />
+					</button>
+				</panel>
 				<button action="effect_stems 'Bass' toggle">
 					<text text="FX"/>
 				</button>
 				<button action="stem 'Bass' 50%" query="stem 'Bass' 50% ? false : true">
-					<text action="stem 'Bass' & param_cast 'percentage'"/>
+					<text text="RESET"/>
 				</button>
 			</panel>
 			<panel class="knob_with_2buttons" x="+0" y="+100+100+100">
-				<slider action="stem rhythm" dblclick="stem rhythm 50%" frommiddle="true"/>
+				<panel>
+					<slider action="stem 'Rhythm'" dblclick="stem 'Rhythm' 50%"/>
+					<textzone>
+						<text text="RHYTHM"/>
+					</textzone>
+					<button action="stem 'Rhythm' 0% while_pressed">
+						<text action="stem 'Rhythm' & param_multiply 200 & param_cast 'integer'" />
+					</button>
+				</panel>
 				<button action="effect_stems 'Rhythm' toggle">
 					<text text="FX"/>
 				</button>
 				<button action="stem 'Rhythm' 50%" query="stem 'Rhythm' 50% ? false : true">
-					<text action="stem 'Rhythm' & param_cast 'percentage'"/>
+					<text text="RESET"/>
 				</button>
 			</panel>
-			
-
-			<panel class="knob_L" name="level" x="+0" y="920">
-<!-- 			
-					<off width="[KNOB_WIDTH]-10" height="[KNOB_HEIGHT]-10" shape="circle" color="knobcolor1" color2="knobcolor2" gradient="vertical" border="bordercolor" border_size="1"/>
-					<fader color="knobfader" width="4" height="[KNOB_HEIGHT]/2-10" radius="6" anglemin="-140" anglemax="140"/>
-					<fill width="[KNOB_WIDTH]" height="[KNOB_HEIGHT]" radius="16" color="knobfillon" backcolor="knobfilloff"/>
-
-				<slider orientation="circle" action="level" dblclick="level 100%">
-					<pos x="+0" y="+0"/>
-					<size width="120" height="120"/>
-					<off width="110" height="110" shape="circle" color="knobcolor1" color2="knobcolor2" gradient="vertical" border="bordercolor" border_size="1"/>
-					<fader color="knobfader" width="4" height="50" radius="6" anglemin="-140" anglemax="140"/>
-					<fill width="120" height="120" radius="16" color="knobfillon" backcolor="knobfilloff"/>
-					<circle x="0" y="0" anglemin="-140" anglemax="140" sectsize="20" direction="cw"/>
-				</slider>
- -->			
+			<panel class="knob_L" name="level" x="+25" y="900">
 				<slider action="level"/>
-				<button>
-					<text action="level"/>
+				<button action="level 33% while_pressed">
+					<text action="level & param_cast 'percentage'"/>
 				</button>
+				<textzone>
+					<text text="LEVEL" />
+				</textzone>
 			</panel>
 		</define>
 		<!-- ============ JOGWHEEL ================= -->
@@ -1327,7 +1383,7 @@
 		<panel name="left_deck" x="30" y="105" visibility="var 'deck_panel' 1">
 			<panel class="fxpad" x="+0" y="+0"/>
 			<panel class="jogwheel" x="+330" y="+0"/>
-			<panel class="songinfo" x="+0" y="510"/>		
+			<panel class="songinfo" x="+0" y="490"/>		
 			<group name="pads" x="+0" y="620">
 				<panel class="padselector" x="+0" y="+0"/>
 				<panel class="padbuttons" x="+0" y="+80"/>
@@ -1337,7 +1393,7 @@
 			<panel class="transport" x="+0" y="1080"/>
 		</panel>
 		<panel class="pitch_loop" x="750" y="255"/>
-		<panel class="audiomixer" x="750" y="510"/>
+		<panel class="audiomixer" x="750" y="490"/>
 		<panel class="browser" name="browser_left" x="30" y="100" visibility="var 'deck_panel' 2"/>
 		<panel class="sampler" name="sampler_left" x="30" y="100" visibility="var 'deck_panel' 3"/>
 	</deck>
@@ -1346,7 +1402,7 @@
 		<panel name="right_deck" x="1200" y="105" visibility="var 'deck_panel' 1">
 			<panel class="fxpad" x="+430" y="+0"/>
 			<panel class="jogwheel" x="+20" y="+0"/>
-			<panel class="songinfo" x="+0" y="510"/>		
+			<panel class="songinfo" x="+0" y="490"/>		
 			<group name="pads" x="+0" y="620">
 				<panel class="padselector" x="+0" y="+0"/>
 				<panel class="padbuttons" x="+0" y="+80"/>
@@ -1356,7 +1412,7 @@
 			<panel class="transport" x="+0" y="1080"/>
 		</panel>
 		<panel class="pitch_loop" x="1000" y="255"/>
-		<panel class="audiomixer" x="1000" y="510"/>
+		<panel class="audiomixer" x="1000" y="490"/>
 		<panel class="browser" name="browser_right" x="1200" y="100" visibility="var 'deck_panel' 2"/>
 		<panel class="sampler" name="sampler_right" x="1200" y="100" visibility="var 'deck_panel' 3"/>
 	</deck>
@@ -1373,14 +1429,15 @@
 			<item text = "Bluetooth" action = "apply_audio_config 'Lenovo BT'" hascheck = "true" /> 
 			<item text = "Laptop" action = "apply_audio_config 'Lenovo Solo'" hascheck = "true" />
 			<item text = "Headphones" action = "apply_audio_config 'Lenovo headphones'" hascheck = "true" />
+			<item text = "Qdelix" action = "apply_audio_config 'Qudelix only'" hascheck = "true" />
+			<item text="-"/>
+			<item text = "Vars" action = "var_list" hascheck = "false" />
 			<item text="-"/>
 			<item text = "Minimize" action = "minimize" hascheck = "false" />
 			<item text = "Maximize" action = "maximize" hascheck = "false" />
 			<item text = "Exit" action = "close" hascheck = "false" />
-			<item text="-"/>
-			<item text = "Vars" action = "var_list" hascheck = "false" />
 		</menu>
-
+<!--
 		<textzone>
 			<pos x="+0" y="+45"/>
 			<size width="65" height="90"/>
@@ -1411,7 +1468,7 @@
 			<size width="65" height="90"/>
 			<text align="center" valign="middle" text="RHYTHM"/>
 		</textzone>
-
+-->
 		<logo circle="false" os="pc">
 			<pos x="-20" y="+1150"/>
 			<size width="100" height="40"/>
@@ -1432,9 +1489,8 @@
 		        action="shift">
 			<text text="shift"/>
 		</button>
-
-<!-- 		"smooth", "full", " Scratch ", "cut"
- -->		<square border="1" border_color="black" color="faderbackground">
+		<!-- "smooth", "full", " Scratch ", "cut" -->
+ 		<square border="1" border_color="black" color="faderbackground">
 			<pos x="+0" y="+40"/>
 			<size width="435" height="90"/>
 		</square>
