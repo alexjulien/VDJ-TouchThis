@@ -1,4 +1,4 @@
-﻿<skin name="Touch This!" author="Don Julien - ok404" comment="Optimized for 1920x1200 touchscreen - Version 0.8 - 2024" version="8" preview="preview.png" nbdecks="4" width="1920" height="1200">
+<skin name="Touch This!" author="Don Julien - ok404" comment="Optimized for 1920x1200 touchscreen - Version 0.8 - 2024" version="8" preview="preview.png" nbdecks="4" width="1920" height="1200">
 	<copyright>- (c)2024 - Don Julien -</copyright>
 	<font name="Arial"/>
 	<nbdecks value="4"/>
@@ -277,12 +277,22 @@
 			<define color="scratch2" value="#f94c00" deck="4"/>
 		</group>
 	</group>
-
+	<!--======================INIT======================-->
+	<oninit action="set 'deck_panel' 1" deck="left"/>
+	<oninit action="set 'deck_panel' 1" deck="right"/>
+	<oninit action="set '$crosseq' 1"/>
+	<oninit action="setting_setdefault skinWaveformType 'shapes'"/>
+	<oninit action="setting_setdefault coverflow 'no'"/>
+	<oninit action="setting_setdefault EqMode 'modernEQ'"/>
+	<oninit action="setting_setdefault autoBPMMatch 'smart'"/>
+	<!-- oninit action="setting_setdefault autoKey on"/ -->
+	<oninit action="setting_setdefault smartPlay off"/>
+	<oninit action="setting_setdefault autoPitchLock off"/>
 	<!--======================COMPONENTS======================-->
 	<group name="components">
 		<!--======================BUTTONS & KNOBS======================-->
 		<group name="buttons">
-			<define class="button1" placeholders="*button_width=60,*button_height=35">
+			<define class="button1" placeholders="*button_width=60,*button_height=35,sysicon">
 				<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]"/>
 				<off shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
 				<over shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
@@ -349,47 +359,47 @@
 			</define>
 		</group>
 		<group name="knobs">
-		<define class="knob_Mc" placeholders="*size=90,*center=40"> 
-			<line x="+[SIZE]/2" y="+0" width="3" height="[SIZE]-[CENTER]/2" color="deckcolorbright" />
-			<slider frommiddle="true" orientation="circle" relative="no" >
-				<pos x="+0" y="+0"/>
-				<size width="[SIZE]" height="[SIZE]"/>
-				<circle direction="cw" anglemin="-140" anglemax="140" />
-				<on shape="circle" color="deckcolorbright"  />
-				<up x="0" y="1200" />
-			</slider>
-			<button>
-				<pos x="+[SIZE]-[CENTER]/2" y="+[SIZE]-[CENTER]/2"/>
-				<size width="[CENTER]" height="[CENTER]"/>
-				<off shape="circle" color="display" border_size="3" border="deckcolorbright"/>
-				<text fontsize="12" weight="normal" color="texton" align="center" valign="center"/>
-			</button>
-			<textzone>
-				<pos x="+0" y="+[SIZE]-14"/>
-				<size width="[SIZE]" height="12"/>
-				<text align="center" color="texton" fontsize="10" valign="middle"/>
-			</textzone>
-		</define> 		
-		<define class="knob_L" placeholders="*size=140,*center=80"> 
-			<slider frommiddle="false" orientation="circle" relative="no" >
-				<pos x="+0" y="+0"/>
-				<size width="[SIZE]" height="[SIZE]"/>
-				<circle direction="cw" anglemin="-140" anglemax="140"/>
-				<on shape="circle" color="deckcolorbright"  />
-				<up x="90" y="1200" />
-			</slider>
-			<button>
-				<pos x="+[SIZE]-[CENTER]/2" y="+[SIZE]-[CENTER]/2"/>
-				<size width="[CENTER]" height="[CENTER]"/>
-				<off shape="circle" color="display" border_size="3" border="deckcolorbright"/>
-				<text fontsize="18" weight="normal" color="textover" align="center" valign="center"/>
-			</button>
-			<textzone>
-				<pos x="+0" y="+[SIZE]-18"/>
-				<size width="[SIZE]" height="12"/>
-				<text align="center" color="texton" fontsize="10" valign="middle"/>
-			</textzone>
-		</define> 
+			<define class="knob_Mc" placeholders="*size=90,*center=40"> 
+				<line x="+[SIZE]/2" y="+0" width="3" height="[SIZE]-[CENTER]/2" color="deckcolorbright" />
+				<slider frommiddle="true" orientation="circle" relative="no" >
+					<pos x="+0" y="+0"/>
+					<size width="[SIZE]" height="[SIZE]"/>
+					<circle direction="cw" anglemin="-140" anglemax="140" />
+					<on shape="circle" color="deckcolorbright"  />
+					<up x="0" y="1200" />
+				</slider>
+				<button>
+					<pos x="+[SIZE]-[CENTER]/2" y="+[SIZE]-[CENTER]/2"/>
+					<size width="[CENTER]" height="[CENTER]"/>
+					<off shape="circle" color="display" border_size="3" border="deckcolorbright"/>
+					<text fontsize="12" weight="normal" color="texton" align="center" valign="center"/>
+				</button>
+				<textzone>
+					<pos x="+0" y="+[SIZE]-14"/>
+					<size width="[SIZE]" height="12"/>
+					<text align="center" color="texton" fontsize="10" valign="middle"/>
+				</textzone>
+			</define> 		
+			<define class="knob_L" placeholders="*size=140,*center=80"> 
+				<slider frommiddle="false" orientation="circle" relative="no" >
+					<pos x="+0" y="+0"/>
+					<size width="[SIZE]" height="[SIZE]"/>
+					<circle direction="cw" anglemin="-140" anglemax="140"/>
+					<on shape="circle" color="deckcolorbright"  />
+					<up x="90" y="1200" />
+				</slider>
+				<button>
+					<pos x="+[SIZE]-[CENTER]/2" y="+[SIZE]-[CENTER]/2"/>
+					<size width="[CENTER]" height="[CENTER]"/>
+					<off shape="circle" color="display" border_size="3" border="deckcolorbright"/>
+					<text fontsize="18" weight="normal" color="textover" align="center" valign="center"/>
+				</button>
+				<textzone>
+					<pos x="+0" y="+[SIZE]-18"/>
+					<size width="[SIZE]" height="12"/>
+					<text align="center" color="texton" fontsize="10" valign="middle"/>
+				</textzone>
+			</define> 
 			<define class="knob_with_2buttons_" classdeck="left" placeholders="*knob_width=90,*knob_height=90,*button_width=60,*button_height=35">
 				<slider orientation="round">
 					<pos x="+[BUTTON_WIDTH]+20" y="+0"/>
@@ -403,6 +413,21 @@
 				</button>
 				<button class="button1">
 					<pos x="+0" y="+[BUTTON_HEIGHT]+10"/>
+				</button>
+			</define>
+			<define class="knob_with_2buttons__" classdeck="right" placeholders="*knob_width=90,*knob_height=90,*button_width=60,*button_height=35">
+				<slider orientation="round">
+					<pos x="+10" y="+0"/>
+					<size width="[KNOB_WIDTH]" height="[KNOB_HEIGHT]"/>
+					<off width="[KNOB_WIDTH]-10" height="[KNOB_HEIGHT]-10" shape="circle" color="knobcolor1" color2="knobcolor2" gradient="vertical" border="bordercolor" border_size="1"/>
+					<fader color="knobfader" width="4" height="[KNOB_HEIGHT]/2-10" radius="6" anglemin="-140" anglemax="140"/>
+					<fill width="[KNOB_WIDTH]" height="[KNOB_HEIGHT]" radius="16" color="knobfillon" backcolor="knobfilloff"/>
+				</slider>
+				<button class="button1">
+					<pos x="+[KNOB_WIDTH]+30" y="+0"/>
+				</button>
+				<button class="button1">
+					<pos x="+[KNOB_WIDTH]+30" y="+[BUTTON_HEIGHT]+10"/>
 				</button>
 			</define>
 			<define class="knob_with_2buttons" classdeck="left" placeholders="*knob_width=90,*knob_height=90,*button_width=60,*button_height=35">
@@ -426,19 +451,6 @@
 				<button class="button1">
 					<pos x="+[KNOB_WIDTH]+30" y="+[BUTTON_HEIGHT]+10"/>
 				</button>
-
-<!--
-				<slider orientation="round">
-					<pos x="+10" y="+0"/>
-					<size width="[KNOB_WIDTH]" height="[KNOB_HEIGHT]"/>
-					<off width="[KNOB_WIDTH]-10" height="[KNOB_HEIGHT]-10" shape="circle" color="knobcolor1" color2="knobcolor2" gradient="vertical" border="bordercolor" border_size="1"/>
-					<fader color="knobfader" width="4" height="[KNOB_HEIGHT]/2-10" radius="6" anglemin="-140" anglemax="140"/>
-					<fill width="[KNOB_WIDTH]" height="[KNOB_HEIGHT]" radius="16" color="knobfillon" backcolor="knobfilloff"/>
-				</slider>
-				<button class="button1">
-				</button>
-				<button class="button1">
-				</button> -->
 			</define>
 			<define class="volume_fader" classdeck="left" placeholders="*knob_width=30,*knob_height=180,*button_width=60,*button_height=60">
 				<slider orientation="round">
@@ -664,7 +676,6 @@
 					</button>
 				</panel>
 			</define>
-
 		</group>
 		<!--======================SONG INFO======================-->
 		<define class="songinfo" placeholders="*width=690,*height=90">
@@ -674,7 +685,7 @@
 			</cover>
 			<songpos name="songpos" colorPlayed="darker" colorBass="colorbass" colorMed="colormed" colorHigh="colorhigh" placeholders="*width=690,*height=90">
 				<pos x="+[HEIGHT]+5" y="+0"/>
-				<size width="[WIDTH]-[HEIGHT]-10" height="2*[HEIGHT]/3"/>
+				<size width="[WIDTH]-[HEIGHT]-10" height="[HEIGHT]"/><!-- height="2*[HEIGHT]/3"/-->
 				<wave>
 					<off color="display"/>
 					<size height="[HEIGHT]"/>
@@ -691,16 +702,17 @@
 			</songpos>				
 			<panel name="songinfo">
 				<textzone group="horizontal" scroll="no" click="scroll" align="left">
-					<pos x="+[HEIGHT]+5" y="+2*[HEIGHT]/3-10"/>
-					<size width="[WIDTH]-[HEIGHT]" height="[HEIGHT]/2"/>
-					<text fontsize="18" color="title" weight="bold" action="get_title_before_remix" important="true"/>
-					<text fontsize="18" color="remix" action="get_remix_after_title" important="true"/>
+					<pos x="+[HEIGHT]+15" y="+[HEIGHT]/2"/> <!-- +2*[HEIGHT]/3-10"/-->
+					<size width="[WIDTH]-[HEIGHT]-30" height="[HEIGHT]/2"/>
+					<text fontsize="26" color="title" weight="bold" action="get_title_before_remix" important="true"/>
+					<text fontsize="26" color="remix" action="get_remix_after_title" important="true"/>
 				</textzone>
 				<textzone group="horizontal" scroll="no" click="scroll" align="right">
-					<pos x="-3" y="+2*[HEIGHT]/3-10"/>
-					<size width="[WIDTH]-[HEIGHT]" height="[HEIGHT]/2"/>
-					<text fontsize="15" color="artist" action="get_artist_before_feat" important="true"/>
-					<text fontsize="15" color="feat" action="get_featuring_after_artist" important="true"/>
+					<!--pos x="-3" y="+2*[HEIGHT]/3-10"/-->
+					<pos x="+[HEIGHT]+15" y="+3"/>
+					<size width="[WIDTH]-[HEIGHT]-30" height="[HEIGHT]/2"/>
+					<text fontsize="22" color="artist" action="get_artist_before_feat" important="true"/>
+					<text fontsize="22" color="feat" action="get_featuring_after_artist" important="true"/>
 				</textzone>
 			</panel>
 		</define>
@@ -830,7 +842,7 @@
 			<panel class="extra_knob" x="+0" y="+0">
 				<slider action="gain" dblclick="gain 50%" frommiddle="true"/>
 				<textzone>
-					<text text="GAIN"/>
+					<text text="GAIN" action="gain"/>
 				</textzone>
 			</panel>
 			<button class="button2" action="pfl" sysicon="headphones" x="+110" y="+10"/>
@@ -872,11 +884,12 @@
 			</button>
 			<panel class="knob_with_2buttons" x="+300" y="1080">
 				<slider action="sampler_volume_master"/>
-				<button action="sampler_rec 'Master'">
-					<text text="REC"/>
+				<button action="sampler_rec
+				">
+					<text text="REC LEFT"/>
 				</button>
-				<button action="sampler_rec 'Master' 1">
-					<text text="REC->1"/>
+				<button action="sampler_rec right">
+					<text text="REC RIGHT"/>
 				</button>
 			</panel>
 			<button class="button_transport" action="sampler_options 'sideview'" query="off">>
@@ -913,30 +926,26 @@
 			</button>
 			
 			<panel x="+10" y="+631" visible="var '$samplerfx' 1">	
-				
 				<button class="buttonsmall_white" bwidth="160" bheight="40" action="effect_active 'sampler'">
 					<Tooltip>Sampler Effect</Tooltip>
 					<pos x="+15" y="+283-260-20"/>
 					<text fontsize="15" action="get_effect_name 'sampler' & param_uppercase"/>
 				</button>
 				<button class="buttonsmall_white" bwidth="80" bheight="40" action="effect_select 'sampler'">
-					<tooltip>Select Sampler Effect</Tooltip>
+					<tooltip>Select Sampler Effect</tooltip>
 					<pos x="+15+160+20" y="+283-260-20" />
 					<text fontsize="14" text="SEL"/>
 				</button>
 				<button class="buttonsmall_white" bwidth="50" bheight="40" action="effect_select 'sampler' -1">
-					<tooltip>Select Previous Sampler Effect</Tooltip>
+					<tooltip>Select Previous Sampler Effect</tooltip>
 					<pos x="+15+160+20+80+5" y="+283-260-20" />
-					<text fontsize="14" text="<"/>
+					<text fontsize="14" text="&lt;"/>
 				</button>
 				<button class="buttonsmall_white" bwidth="50" bheight="40" action="effect_select 'sampler' +1">
-					<tooltip>Select Next Sampler Effect</Tooltip>
+					<tooltip>Select Next Sampler Effect</tooltip>
 					<pos x="+15+160+20+120+20" y="+283-260-20" />
-					<text fontsize="14" text=">"/>
+					<text fontsize="14" text="&gt;"/>
 				</button>		
-			
-		
-
 				<panel class="knob_new_master" x="+15" y="+55">
 					<visual/>
 						<slider action="effect_slider 'sampler' 1"  />
@@ -1047,36 +1056,28 @@
 				<text text="APPEND" />
 			</button>
 		</define>
-		<!-- ============PITCHLOOP================= -->
+		<!-- ============PITCH_LOOP================= -->
 		<define class="pitch_loop" width="180" height="960">
 			<line color="deckcolorbright" x="+0" y="+0" width="180" height="2"/>
-			<panel class="knob_with_2buttons" x="+0" y="+15">
-				<panel>
-					<slider action="pitch" dblclick="pitch_reset 1bt"/>
+			<panel class="knob_with_2buttons_" x="+0" y="+15">
+				<!--panel-->
+					<slider action="pitch" dblclick="pitch_reset 1bt" frommiddle="true"/>
 					<textzone>
 						<text text="PITCH"/>
 					</textzone>
+					<!--
 					<button action="pitch_reset 1bt">
 						<text format="%Ppitch" />
 					</button>
-				</panel>
+					-->
+				<!--/panel-->
 				<button action="pitch_range '8,16,32' +1">
-					<text action="pitch_range & param_cast 'percentage'"/>
+					<text action="pitch_range & param_cast 'percentage'" />
 				</button>
 				<button action="pitch_reset 64bt" query="pitch_reset ? blink : pitch_zero 'center' ? off : on">
-					<text text="RESET..."/>
+					<text text="RESET"/>
 				</button>
 			</panel>
-<!--
-
-				<slider action="pitch" dblclick="pitch_reset 1bt" frommiddle="true"/>
-				<button action="pitch_range '8,12,16,35' +1">
-					<text action="pitch_range & param_cast 'percentage'"/>
-				</button>
-				<button action="pitch_reset 64bt" query="pitch_reset ? blink : pitch_zero 'center' ? off : on">
-					<text format="%Ppitch"/>
-				</button>
-				-->
 			<button class="button1" action="loop_half" x="+0" y="+120">
 				<text text="-"/>
 			</button>
@@ -1170,7 +1171,7 @@
 			</panel>
 			<panel class="knob_L" name="level" x="+25" y="900">
 				<slider action="level"/>
-				<button action="level 33% while_pressed">
+				<button action="level 100% while_pressed">
 					<text action="level & param_cast 'percentage'"/>
 				</button>
 				<textzone>
@@ -1179,7 +1180,7 @@
 			</panel>
 		</define>
 		<!-- ============ JOGWHEEL ================= -->
-		<define class="jogwheel" placeholders="*width=320,*height=320">
+		<define class="jogwheel_" placeholders="*width=320,*height=320">
 			<visual name="outerborder" x="+20" y="+20" type="circle">
 				<size width="[WIDTH]" height="[HEIGHT]"/>
 				<off border_size="2" border="black" color="mixerbackground" shape="circle"/>
@@ -1257,6 +1258,203 @@
 				<pos x="+0" y="+[HEIGHT]+6"/>
 				<text action="masterdeck ? on : off" />
 			</button>
+		</define>
+		<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
+		<define class="jogwheel" placeholders="*width=320,*height=320" classdeck="left">
+			<group x="+10" y="-20">
+				<visual name="outerborder" x="+20" y="+20" type="circle">
+					<size width="[WIDTH]" height="[HEIGHT]"/>
+					<off border_size="2" border="black" color="mixerbackground" shape="circle"/>
+				</visual>
+				<visual name="outercircle" x="+22" y="+22" type="circle" source="song_pos 'show warning'">
+					<size width="[WIDTH]-4" height="[HEIGHT]-4"/>
+					<off color="mixerbackground" shape="circle"/>
+					<on color="deckcolor" shape="circle"/>
+					<mousecircle/>
+				</visual>
+				<slider name="dome_spinner" orientation="round" action="get_rotation" x="+30" y="+30" visibility="loaded" tooltip="">
+					<size width="[WIDTH]-20" height="[HEIGHT]-20"/>
+					<off border_size="1" border="black" color="dark" shape="circle"/>
+					<fader color="deckcolordark" width="6" height="[WIDTH]/2-25" radius="12"/>
+				</slider>
+				<slider name="dome_spinner" orientation="round" action="get_rotation" x="+30" y="+30" novisibility="loaded" tooltip="">
+					<size width="[WIDTH]-20" height="[HEIGHT]-20"/>
+					<off border_size="1" border="black" color="dark" shape="circle"/>
+					<fader color="knobfilloff" width="6" height="[WIDTH]/2-25" radius="12"/>
+				</slider>
+				<visual name="center-circle" x="+[WIDTH]/2+10" y="+[HEIGHT]/2+10" source="loaded">
+					<size width="20" height="20"/>
+					<on color="deckcolor" shape="circle"/>
+					<off color="graydark" shape="circle"/>
+				</visual>
+				<panel name="jogwheel_displays" visibility="loaded">
+					<textzone tooltip="`get_bpm 'all'`">
+						<pos x="+20" y="+90"/>
+						<size width="[WIDTH]" height="60"/>
+						<text fontsize="60" color="textdeck" align="center" weight="bold" format="%Pbpmex"/>
+					</textzone>
+					<group y="+146">
+						<textzone>
+							<pos x="+40" y="+20"/>
+							<size width="[WIDTH]/2-40" height="30"/>
+							<text fontsize="28" color="textdark" weight="" format="%Ppitch%" align="center"/>
+						</textzone>
+						<textzone>
+							<pos x="+[WIDTH]/2+40" y="+20"/>
+							<size width="[WIDTH]/2-40" height="30"/>
+							<text fontsize="28" color="textdark" weight="" format="-+%Ppitchrange%" align="center"/>
+						</textzone>
+					</group>
+					<group y="+192">
+						<textzone tooltip="">
+							<pos x="+20" y="+20"/>
+							<size width="[WIDTH]" height="50"/>
+							<text fontsize="36" color="textdark" align="center" weight="" action="get_time 'elapsed'" important="true"/>
+						</textzone>
+						<textzone tooltip="">
+							<pos x="+20" y="+62"/>
+							<size width="[WIDTH]" height="50"/>
+							<text fontsize="36" color="textoff3" align="center" weight="" action="get_time 'remain'" important="true"/>
+						</textzone>
+					</group>
+				</panel>
+				<scratch>
+					<pos x="+0" y="+0"/>
+					<size width="[WIDTH]" height="[HEIGHT]"/>
+					<mousecircle/>
+				</scratch>
+			</group>
+			<group x="-45" y="+0">
+				<button class="button1" action="vinyl_mode toggle">
+					<pos x="+0" y="+[HEIGHT]/4*3"/>
+					<text text="SCRATCH" />
+				</button>
+				<button class="button1" action="slip_mode" query="get_slip_active ? blink : slip_mode">
+					<pos x="+0" y="+[HEIGHT]/4*2"/>
+					<text text="SLIP" />
+				</button>
+				<button class="button1" action="reverse">
+					<pos x="+0" y="+[HEIGHT]/4*1"/>
+					<text text="REVERSE" />
+				</button>
+				<button class="button1" action="masterdeck toggle">
+					<pos x="+0" y="+[HEIGHT]/4*0"/>
+					<text text="MASTER"/> <!--action="masterdeck ? on : off" /-->
+				</button>
+				<panel class="up_down_num" x="+0" y="+[HEIGHT]/4*3+40">
+					<button action="beatjump_select -1"/>
+					<button action="beatjump_page">
+						<text action="beatjump"/>
+					</button>
+					<button action="beatjump_select +1"/>
+				</panel>
+				<button class="button1" action="beatjump -1">
+					<pos x="+0" y="+[HEIGHT]/4*4+10"/>
+					<text text="&lt;" />
+				</button>
+				<button class="button1" action="beatjump +1">
+					<pos x="+60" y="+[HEIGHT]/4*4+10"/>
+					<text text="&gt;" />
+				</button>`
+			</group>
+		</define>
+		<define class="jogwheel" placeholders="*width=320,*height=320" classdeck="right">
+			<group x="+0" y="-20">
+				<visual name="outerborder" x="+20" y="+20" type="circle">
+					<size width="[WIDTH]" height="[HEIGHT]"/>
+					<off border_size="2" border="black" color="mixerbackground" shape="circle"/>
+				</visual>
+				<visual name="outercircle" x="+22" y="+22" type="circle" source="song_pos 'show warning'">
+					<size width="[WIDTH]-4" height="[HEIGHT]-4"/>
+					<off color="mixerbackground" shape="circle"/>
+					<on color="deckcolor" shape="circle"/>
+					<mousecircle/>
+				</visual>
+				<slider name="dome_spinner" orientation="round" action="get_rotation" x="+30" y="+30" visibility="loaded" tooltip="">
+					<size width="[WIDTH]-20" height="[HEIGHT]-20"/>
+					<off border_size="1" border="black" color="dark" shape="circle"/>
+					<fader color="deckcolordark" width="6" height="[WIDTH]/2-25" radius="12"/>
+				</slider>
+				<slider name="dome_spinner" orientation="round" action="get_rotation" x="+30" y="+30" novisibility="loaded" tooltip="">
+					<size width="[WIDTH]-20" height="[HEIGHT]-20"/>
+					<off border_size="1" border="black" color="dark" shape="circle"/>
+					<fader color="knobfilloff" width="6" height="[WIDTH]/2-25" radius="12"/>
+				</slider>
+				<visual name="center-circle" x="+[WIDTH]/2+10" y="+[HEIGHT]/2+10" source="loaded">
+					<size width="20" height="20"/>
+					<on color="deckcolor" shape="circle"/>
+					<off color="graydark" shape="circle"/>
+				</visual>
+				<panel name="jogwheel_displays" visibility="loaded">
+					<textzone tooltip="`get_bpm 'all'`">
+						<pos x="+20" y="+90"/>
+						<size width="[WIDTH]" height="60"/>
+						<text fontsize="60" color="textdeck" align="center" weight="bold" format="%Pbpmex"/>
+					</textzone>
+					<group y="+146">
+						<textzone>
+							<pos x="+40" y="+20"/>
+							<size width="[WIDTH]/2-40" height="30"/>
+							<text fontsize="28" color="textdark" weight="" format="%Ppitch%" align="center"/>
+						</textzone>
+						<textzone>
+							<pos x="+[WIDTH]/2+40" y="+20"/>
+							<size width="[WIDTH]/2-40" height="30"/>
+							<text fontsize="28" color="textdark" weight="" format="-+%Ppitchrange%" align="center"/>
+						</textzone>
+					</group>
+					<group y="+192">
+						<textzone tooltip="">
+							<pos x="+20" y="+20"/>
+							<size width="[WIDTH]" height="50"/>
+							<text fontsize="36" color="textdark" align="center" weight="" action="get_time 'elapsed'" important="true"/>
+						</textzone>
+						<textzone tooltip="">
+							<pos x="+20" y="+62"/>
+							<size width="[WIDTH]" height="50"/>
+							<text fontsize="36" color="textoff3" align="center" weight="" action="get_time 'remain'" important="true"/>
+						</textzone>
+					</group>
+				</panel>
+				<scratch>
+					<pos x="+0" y="+0"/>
+					<size width="[WIDTH]" height="[HEIGHT]"/>
+					<mousecircle/>
+				</scratch>
+			</group>
+			<group x="+[WIDTH]+35" y="+0">
+				<button class="button1" action="vinyl_mode toggle">
+					<pos x="+0" y="+[HEIGHT]/4*3"/>
+					<text text="SCRATCH" />
+				</button>
+				<button class="button1" action="slip_mode" query="get_slip_active ? blink : slip_mode">
+					<pos x="+0" y="+[HEIGHT]/4*2"/>
+					<text text="SLIP" />
+				</button>
+				<button class="button1" action="reverse">
+					<pos x="+0" y="+[HEIGHT]/4*1"/>
+					<text text="REVERSE" />
+				</button>
+				<button class="button1" action="masterdeck toggle">
+					<pos x="+0" y="+[HEIGHT]/4*0"/>
+					<text text="MASTER"/> <!--action="masterdeck ? on : off" /-->
+				</button>
+				<panel class="up_down_num" x="-60" y="+[HEIGHT]/4*3+40">
+					<button action="beatjump_select -1"/>
+					<button action="beatjump_page">
+						<text action="beatjump"/>
+					</button>
+					<button action="beatjump_select +1"/>
+				</panel>
+				<button class="button1" action="beatjump -1">
+					<pos x="-60" y="+[HEIGHT]/4*4+10"/>
+					<text text="&lt;" />
+				</button>
+				<button class="button1" action="beatjump +1">
+					<pos x="+0" y="+[HEIGHT]/4*4+10"/>
+					<text text="&gt;" />
+				</button>
+			</group>
 		</define>
 	</group>
 
@@ -1401,7 +1599,7 @@
 	<deck deck="right">
 		<panel name="right_deck" x="1200" y="105" visibility="var 'deck_panel' 1">
 			<panel class="fxpad" x="+430" y="+0"/>
-			<panel class="jogwheel" x="+20" y="+0"/>
+			<panel class="jogwheel" x="+0" y="+0"/>
 			<panel class="songinfo" x="+0" y="490"/>		
 			<group name="pads" x="+0" y="620">
 				<panel class="padselector" x="+0" y="+0"/>
@@ -1496,7 +1694,7 @@
 		</square>
 		<slider orientation="2d" 
 				action="var '$crossfadertemp' ? crossfader while_pressed : crossfader " direction="right" 
-				action2="var '$crossfadertemp' ? eq_crossfader_low while_pressed : eq_crossfader_low" direction2="up">
+				action2="var '$crossfadertemp' ? eq_crossfader_low while_pressed : eq_crossfader_low" direction2="down">
 			<tooltip/>
 			<pos x="+0" y="+40"/>
 			<size width="435" height="90"/>
@@ -1509,16 +1707,5 @@
 		</slider>
 	</panel>
 
-	<!--======================INIT======================-->
-	<oninit action="set 'deck_panel' 1" deck="left"/>
-	<oninit action="set 'deck_panel' 1" deck="right"/>
-	<oninit action="set '$crosseq' 1"/>
-	<oninit action="setting_setdefault skinWaveformType 'shapes'"/>
-	<oninit action="setting_setdefault coverflow 'no'"/>
-	<oninit action="setting_setdefault EqMode 'modernEQ'"/>
-	<oninit action="setting_setdefault autoBPMMatch 'smart'"/>
-	<!-- oninit action="setting_setdefault autoKey on"/ -->
-	<oninit action="setting_setdefault smartPlay off"/>
-	<oninit action="setting_setdefault autoPitchLock off"/>
 </skin>
 
