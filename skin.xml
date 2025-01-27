@@ -415,7 +415,7 @@
 					<pos x="+0" y="+[BUTTON_HEIGHT]+10"/>
 				</button>
 			</define>
-			<define class="knob_with_2buttons__" classdeck="right" placeholders="*knob_width=90,*knob_height=90,*button_width=60,*button_height=35">
+			<define class="knob_with_2buttons_" classdeck="right" placeholders="*knob_width=90,*knob_height=90,*button_width=60,*button_height=35">
 				<slider orientation="round">
 					<pos x="+10" y="+0"/>
 					<size width="[KNOB_WIDTH]" height="[KNOB_HEIGHT]"/>
@@ -1180,86 +1180,6 @@
 			</panel>
 		</define>
 		<!-- ============ JOGWHEEL ================= -->
-		<define class="jogwheel_" placeholders="*width=320,*height=320">
-			<visual name="outerborder" x="+20" y="+20" type="circle">
-				<size width="[WIDTH]" height="[HEIGHT]"/>
-				<off border_size="2" border="black" color="mixerbackground" shape="circle"/>
-			</visual>
-			<visual name="outercircle" x="+22" y="+22" type="circle" source="song_pos 'show warning'">
-				<size width="[WIDTH]-4" height="[HEIGHT]-4"/>
-				<off color="mixerbackground" shape="circle"/>
-				<on color="deckcolor" shape="circle"/>
-				<mousecircle/>
-			</visual>
-			<slider name="dome_spinner" orientation="round" action="get_rotation" x="+30" y="+30" visibility="loaded" tooltip="">
-				<size width="[WIDTH]-20" height="[HEIGHT]-20"/>
-				<off border_size="1" border="black" color="dark" shape="circle"/>
-				<fader color="deckcolordark" width="6" height="[WIDTH]/2-25" radius="12"/>
-			</slider>
-			<slider name="dome_spinner" orientation="round" action="get_rotation" x="+30" y="+30" novisibility="loaded" tooltip="">
-				<size width="[WIDTH]-20" height="[HEIGHT]-20"/>
-				<off border_size="1" border="black" color="dark" shape="circle"/>
-				<fader color="knobfilloff" width="6" height="[WIDTH]/2-25" radius="12"/>
-			</slider>
-			<visual name="center-circle" x="+[WIDTH]/2+10" y="+[HEIGHT]/2+10" source="loaded">
-				<size width="20" height="20"/>
-				<on color="deckcolor" shape="circle"/>
-				<off color="graydark" shape="circle"/>
-			</visual>
-			<panel name="jogwheel_displays" visibility="loaded">
-				<textzone tooltip="`get_bpm 'all'`">
-					<pos x="+20" y="+90"/>
-					<size width="[WIDTH]" height="60"/>
-					<text fontsize="60" color="textdeck" align="center" weight="bold" format="%Pbpmex"/>
-				</textzone>
-				<group y="+146">
-					<textzone>
-						<pos x="+40" y="+20"/>
-						<size width="[WIDTH]/2-40" height="30"/>
-						<text fontsize="28" color="textdark" weight="" format="%Ppitch%" align="center"/>
-					</textzone>
-					<textzone>
-						<pos x="+[WIDTH]/2+40" y="+20"/>
-						<size width="[WIDTH]/2-40" height="30"/>
-						<text fontsize="28" color="textdark" weight="" format="-+%Ppitchrange%" align="center"/>
-					</textzone>
-				</group>
-				<group y="+192">
-					<textzone tooltip="">
-						<pos x="+20" y="+20"/>
-						<size width="[WIDTH]" height="50"/>
-						<text fontsize="36" color="textdark" align="center" weight="" action="get_time 'elapsed'" important="true"/>
-					</textzone>
-					<textzone tooltip="">
-						<pos x="+20" y="+62"/>
-						<size width="[WIDTH]" height="50"/>
-						<text fontsize="36" color="textoff3" align="center" weight="" action="get_time 'remain'" important="true"/>
-					</textzone>
-				</group>
-			</panel>
-			<scratch>
-				<pos x="+0" y="+0"/>
-				<size width="[WIDTH]" height="[HEIGHT]"/>
-				<mousecircle/>
-			</scratch>
-			<button class="button1" action="vinyl_mode toggle">
-				<pos x="+[WIDTH]-30" y="+[HEIGHT]+6"/>
-				<text text="SCRATCH" />
-			</button>
-			<button class="button1" action="slip_mode" query="get_slip_active ? blink : slip_mode">
-				<pos x="+[WIDTH]-30" y="+0"/>
-				<text text="SLIP" />
-			</button>
-			<button class="button1" action="reverse">
-				<pos x="+0" y="+0"/>
-				<text text="REVERSE" />
-			</button>
-			<button class="button1" action="masterdeck toggle">
-				<pos x="+0" y="+[HEIGHT]+6"/>
-				<text action="masterdeck ? on : off" />
-			</button>
-		</define>
-		<!-- xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx -->
 		<define class="jogwheel" placeholders="*width=320,*height=320" classdeck="left">
 			<group x="+10" y="-20">
 				<visual name="outerborder" x="+20" y="+20" type="circle">
@@ -1357,6 +1277,38 @@
 					<text text="&gt;" />
 				</button>`
 			</group>
+			<group x="+130" y="+[HEIGHT]/4*4+10">
+				<line x="-4" y="+18" width="250" height="1" color="deckcolorbright" />
+				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_button 2 4">
+					<pos x="+0" y="+0"/>
+					<down shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
+
+					<size width="35" />
+					<text text="1/2" />
+				</button>
+				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_button 2 6">
+					<pos x="+38" y="+0"/>
+					<down shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
+					<size width="35" />
+					<text text="1" />
+				</button>
+				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_button 2 8">
+					<pos x="+76" y="+0"/>
+					<down shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
+					<size width="35" />
+					<text text="2" />
+				</button>
+				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_button 2 9">
+					<pos x="+114" y="+0"/>
+					<down shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
+					<size width="35" />
+					<text text="4" />
+				</button>
+				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_activate 2">
+					<pos x="+180" y="+0"/>
+					<text text="BRAKE"/>
+				</button>
+			</group>
 		</define>
 		<define class="jogwheel" placeholders="*width=320,*height=320" classdeck="right">
 			<group x="+0" y="-20">
@@ -1446,6 +1398,7 @@
 					</button>
 					<button action="beatjump_select +1"/>
 				</panel>
+				<!--text x="-60" y="+[HEIGHT]/4*3" text="JUMP"/-->
 				<button class="button1" action="beatjump -1">
 					<pos x="-60" y="+[HEIGHT]/4*4+10"/>
 					<text text="&lt;" />
@@ -1453,6 +1406,38 @@
 				<button class="button1" action="beatjump +1">
 					<pos x="+0" y="+[HEIGHT]/4*4+10"/>
 					<text text="&gt;" />
+				</button>
+			</group>
+			<group x="+0" y="+[HEIGHT]/4*4+10">
+				<line x="-4" y="+18" width="250" height="1" color="deckcolorbright" />
+				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_button 2 4">
+					<pos x="+80" y="+0"/>
+					<down shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
+
+					<size width="35" />
+					<text text="1/2" />
+				</button>
+				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_button 2 6">
+					<pos x="+118" y="+0"/>
+					<down shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
+					<size width="35" />
+					<text text="1" />
+				</button>
+				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_button 2 8">
+					<pos x="+156" y="+0"/>
+					<down shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
+					<size width="35" />
+					<text text="2" />
+				</button>
+				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_button 2 9">
+					<pos x="+194" y="+0"/>
+					<down shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
+					<size width="35" />
+					<text text="4" />
+				</button>
+				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_activate 2">
+					<pos x="+0" y="+0"/>
+					<text text="BRAKE"/>
 				</button>
 			</group>
 		</define>
@@ -1667,6 +1652,11 @@
 			<text align="center" valign="middle" text="RHYTHM"/>
 		</textzone>
 -->
+		<button class="button2" x="+10" y="+720"
+		        action="shift">
+			<text text="SHIFT"/>
+		</button>
+
 		<logo circle="false" os="pc">
 			<pos x="-20" y="+1150"/>
 			<size width="100" height="40"/>
@@ -1679,13 +1669,9 @@
 		        action="toggle '$crossfadertemp'">
 			<text text="TEMP"/>
 		</button>
-		<button class="button1" x="+182" y="+0"
+		<button class="button1" x="+185" y="+0"
 		        action="crossfader 50% & eq_crossfader_low 50%">
 			<text text="ZERO"/>
-		</button>
-		<button class="button1" x="+375" y="+0"
-		        action="shift">
-			<text text="shift"/>
 		</button>
 		<!-- "smooth", "full", " Scratch ", "cut" -->
  		<square border="1" border_color="black" color="faderbackground">
