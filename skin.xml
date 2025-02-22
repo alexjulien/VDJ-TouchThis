@@ -280,6 +280,8 @@
 	<!--======================INIT======================-->
 	<oninit action="set 'deck_panel' 1" deck="left"/>
 	<oninit action="set 'deck_panel' 1" deck="right"/>
+	<oninit action="set 'brake_length' 0" deck="left"/>
+	<oninit action="set 'brake_length' 0" deck="right"/>
 	<oninit action="set '$crosseq' 1"/>
 	<oninit action="setting_setdefault skinWaveformType 'shapes'"/>
 	<oninit action="setting_setdefault coverflow 'no'"/>
@@ -597,8 +599,8 @@
 			<!--======================TRANSPORT BUTTONS======================-->
 			<define class="transport" classdeck="left" placeholders="*width=205,*height=90">
 				<button class="button_transport" x="+0" y="+0" action="sync" text="SYNC" localize="true"/>
-				<button class="button_transport" x="+[WIDTH]" y="+0" action="cue_button" textaction="cue_button"/>
-				<button class="button_transport" x="+[WIDTH]+[WIDTH]" y="+0" sysicon="play_button" iconsize="[HEIGHT]*2/3" action="play_button"/>				
+				<button class="button_transport" x="+[WIDTH]" y="+0" action="shift ? goto_first_beat : cue_button" textaction="cue_button"/>
+				<button class="button_transport" x="+[WIDTH]+[WIDTH]" y="+0" sysicon="play_button" iconsize="[HEIGHT]*2/3" action="shift ? play_stutter : play_pause"/>
 				<panel class="beatcounter">
 					<pos x="[HEIGHT]/4+[WIDTH]+[WIDTH]+[WIDTH]+" y="+5"/>
 				</panel>
@@ -607,8 +609,8 @@
 				<panel class="beatcounter">
 					<pos x="+0" y="+5"/>
 				</panel>
-				<button class="button_transport" x="+[HEIGHT]+5" y="+0" sysicon="play_button" iconsize="[HEIGHT]*2/3" action="play_button"/>
-				<button class="button_transport" x="+[HEIGHT]+[WIDTH]+5" y="+0" action="cue_button" textaction="cue_button"/>
+				<button class="button_transport" x="+[HEIGHT]+5" y="+0" sysicon="play_button" iconsize="[HEIGHT]*2/3" action="shift ? play_stutter : play_pause"/>
+				<button class="button_transport" x="+[HEIGHT]+[WIDTH]+5" y="+0" action="shift ? goto_first_beat : cue_button" textaction="cue_button"/>
 				<button class="button_transport" x="+[HEIGHT]+[WIDTH]+[WIDTH]+5" y="+0" action="sync" text="SYNC" localize="true"/>
 			</define>
 		</group>
@@ -767,7 +769,7 @@
 				</button>
 				<button class="button1" action="toggle 'fxtemp' & effect_active">
 					<pos x="+70" y="+[HEIGHT]+10"/>
-					<text action="$fxtemp & 'hold'"/>
+					<text text="ACTIVE" action="$fxtemp & 'hold'"/>
 				</button>
 				<button class="button1" action="effect_button 1">
 					<pos x="+140" y="+[HEIGHT]+10"/>
@@ -808,6 +810,102 @@
 					<text text="NOISE"/>
 				</button>
 				<button class="button1" action="effect_select 1 'Phaser'">
+					<pos x="+210" y="+[HEIGHT]+100"/>
+					<text text="PHASER"/>
+				</button>
+			</group>			
+		</define>
+		<define class="fxpad_sampler" placeholders="*width=268,*height=230">
+			<group x="+0" y="+0">
+				<square border="1" border_color="black" color="faderbackground">
+					<pos x="-1" y="-1"/>
+					<size width="[WIDTH]+2" height="[HEIGHT]+2"/>
+				</square>
+				<slider orientation="2d" 
+					action="var 'fxtemp_sampler' ? effect_slider 'sampler' 1 : effect_slider_active 'sampler' 1" 
+					direction="right" 
+					action2="var 'fxtemp_sampler' ? effect_slider 'sampler' 2 : effect_slider_active 'sampler' 2"
+					direction2="up">
+					<tooltip/>
+					<pos x="+0" y="+0"/>
+					<size width="[WIDTH]" height="[HEIGHT]"/>
+					<fader>
+						<size width="[WIDTH]/8" height="[HEIGHT]/8"/>
+						<off color="deckcolorbright"/>
+					</fader>
+				</slider>
+				<textzone>
+					<pos x="+2" y="+2"/>
+					<size width="100" height="30"/>
+					<text fontsize="18" align="left" valign="top" action="get_effect_name 'sampler' 1"/>
+				</textzone>
+				<textzone>
+					<pos x="+2" y="+[HEIGHT]-40"/>
+					<size width="100" height="20"/>
+					<text fontsize="12" align="left" valign="top" action="get_effect_slider_name 'sampler' 1"/>
+				</textzone>
+				<textzone>
+					<pos x="+2" y="+[HEIGHT]-22"/>
+					<size width="100" height="20"/>
+					<text fontsize="16" align="left" valign="top" action="get_effect_slider_text 'sampler' 1"/>
+				</textzone>
+				<textzone>
+					<pos x="+[WIDTH]-102" y="+2"/>
+					<size width="100" height="20"/>
+					<text fontsize="12" align="right" valign="top" action="get_effect_slider_name 'sampler' 2"/>
+				</textzone>
+				<textzone>
+					<pos x="+[WIDTH]-102" y="+22"/>
+					<size width="100" height="20"/>
+					<text fontsize="16" align="right" valign="top" action="get_effect_slider_text 'sampler' 2"/>
+				</textzone>
+				<button class="button1" action="effect_select 'sampler'">
+					<pos x="+0" y="+[HEIGHT]+10"/>
+					<text text="FX"/>
+				</button>
+				<button class="button1" action="toggle 'fxtemp_sampler' & effect_active 'sampler'">
+					<pos x="+70" y="+[HEIGHT]+10"/>
+					<text text="ACTIVE" action="$fxtemp_sampler & 'hold'"/>
+				</button>
+				<button class="button1" action="effect_button 'sampler' 1">
+					<pos x="+140" y="+[HEIGHT]+10"/>
+					<text action="get_effect_button_name 'sampler' 1"/>
+				</button>
+				<button class="button1" action="effect_button 'sampler' 2">
+					<pos x="+210" y="+[HEIGHT]+10"/>
+					<text action="get_effect_button_name 'sampler' 2"/>
+				</button>
+				
+				<button class="button1" action="effect_select 'sampler' 'Echo'">
+					<pos x="+0" y="+[HEIGHT]+55"/>
+					<text text="ECHO"/>
+				</button>
+				<button class="button1" action="effect_select 'sampler' 'Cut'">
+					<pos x="+70" y="+[HEIGHT]+55"/>
+					<text text="CUT"/>
+				</button>
+				<button class="button1" action="effect_select 'sampler' 'Beat Grid'">
+					<pos x="+140" y="+[HEIGHT]+55"/>
+					<text text="BEAT GRID"/>
+				</button>
+				<button class="button1" action="effect_select 'sampler' 'Flanger'">
+					<pos x="+210" y="+[HEIGHT]+55"/>
+					<text text="FLANGER"/>
+				</button>
+				
+				<button class="button1" action="effect_select 'sampler' 'Delay'">
+					<pos x="+0" y="+[HEIGHT]+100"/>
+					<text text="DELAY"/>
+				</button>
+				<button class="button1" action="effect_select 'sampler' 'Filter'">
+					<pos x="+70" y="+[HEIGHT]+100"/>
+					<text text="FILTER"/>
+				</button>
+				<button class="button1" action="effect_select 'sampler' 'Noise'">
+					<pos x="+140" y="+[HEIGHT]+100"/>
+					<text text="NOISE"/>
+				</button>
+				<button class="button1" action="effect_select 'sampler' 'Phaser'">
 					<pos x="+210" y="+[HEIGHT]+100"/>
 					<text text="PHASER"/>
 				</button>
@@ -882,16 +980,26 @@
 				<pos x="+100" y="1080"/>
 				<icon sysicon="sampler_mode" width="35" height="35"/>
 			</button>
+
 			<panel class="knob_with_2buttons" x="+300" y="1080">
-				<slider action="sampler_volume_master"/>
-				<button action="sampler_rec
-				">
+				<panel>
+					<line color="darker" />
+					<slider action="sampler_volume_master" frommiddle="false"/>
+					<textzone>
+						<text text="VOLUME"/>
+					</textzone>
+					<button action="sampler_volume_master 0% while_pressed">
+						<text action="sampler_volume_master & param_cast 'percentage'" />
+					</button>
+				</panel>
+				<button action="deck left sampler_rec" deck="left">
 					<text text="REC LEFT"/>
 				</button>
-				<button action="sampler_rec right">
+				<button action="deck right sampler_rec" deck="right">
 					<text text="REC RIGHT"/>
 				</button>
 			</panel>
+
 			<button class="button_transport" action="sampler_options 'sideview'" query="off">>
 				<pos x="+500" y="1080"/>
 				<text text="OPTIONS" />
@@ -900,66 +1008,8 @@
 				<pos x="+0" y="+640"/>
 				<size width="400" height="300"/>
 			</filelist>
-			<panel class="fxpad">
+			<panel class="fxpad_sampler">
 				<pos x="+430" y="+600"/>
-			</panel>
-			<textzone>
-				<pos x="+10" y="+25+55" width="60" height="42"/>
-				<text color="textcolorbright" align="left" weight="bold" fontsize="12"  format="RECORD"/>
-			</textzone>
-			<button class="buttonsmall_white" bheight="45" action="deck left sampler_rec"   >
-				<pos x="+15+60" y="+20+55"/>
-				<text fontsize="14" text="A"/>
-			</button>
-			<button class="buttonsmall_white" bheight="45" action="deck right sampler_rec"  >
-				<pos x="+15+60+60" y="+20+55"/>
-				<text fontsize="14" text="B"/>
-			</button>				
-
-			<button class="roundbutton" action="sampler_volume_master 100% ? sampler_volume_master 0% : sampler_volume_master 100%" query="sampler_volume_master 100% ? on : off" visibility="sampler_volume_master 0% ? false : true">
-				<Tooltip>Maximize Sampler Master Volume</Tooltip>
-				<pos x="+220+62" y="+75+120"/>
-			</button>
-			<button class="roundbutton_red" action="sampler_volume_master 100%" query="sampler_volume_master 0% ? on : off" visibility="sampler_volume_master 0%">
-				<Tooltip>Set Sampler Master Volume to maximum</Tooltip>
-				<pos x="+220+62" y="+75+120"/>
-			</button>
-			
-			<panel x="+10" y="+631" visible="var '$samplerfx' 1">	
-				<button class="buttonsmall_white" bwidth="160" bheight="40" action="effect_active 'sampler'">
-					<Tooltip>Sampler Effect</Tooltip>
-					<pos x="+15" y="+283-260-20"/>
-					<text fontsize="15" action="get_effect_name 'sampler' & param_uppercase"/>
-				</button>
-				<button class="buttonsmall_white" bwidth="80" bheight="40" action="effect_select 'sampler'">
-					<tooltip>Select Sampler Effect</tooltip>
-					<pos x="+15+160+20" y="+283-260-20" />
-					<text fontsize="14" text="SEL"/>
-				</button>
-				<button class="buttonsmall_white" bwidth="50" bheight="40" action="effect_select 'sampler' -1">
-					<tooltip>Select Previous Sampler Effect</tooltip>
-					<pos x="+15+160+20+80+5" y="+283-260-20" />
-					<text fontsize="14" text="&lt;"/>
-				</button>
-				<button class="buttonsmall_white" bwidth="50" bheight="40" action="effect_select 'sampler' +1">
-					<tooltip>Select Next Sampler Effect</tooltip>
-					<pos x="+15+160+20+120+20" y="+283-260-20" />
-					<text fontsize="14" text="&gt;"/>
-				</button>		
-				<panel class="knob_new_master" x="+15" y="+55">
-					<visual/>
-						<slider action="effect_slider 'sampler' 1"  />
-						<visual/> <visual/>
-					<textzone><text format="`get_effect_slider_shortname 'sampler' 1`\n`get_effect_slider_text 'sampler' 1`"/></textzone>
-					<button action="effect_slider_reset 'sampler' 1" query="off"></button>
-				</panel>
-				<panel class="knob_new_master" x="+15+180" y="+55" >
-					<visual/>
-						<slider action="effect_slider 'sampler' 2"  />
-						<visual/> <visual/>
-					<textzone><text format="`get_effect_slider_shortname 'sampler' 2`\n`get_effect_slider_text 'sampler' 2`"/></textzone>
-					<button action="effect_slider_reset 'sampler' 2" query="off"></button>
-				</panel>				
 			</panel>
 		</define>
 
@@ -1061,7 +1111,7 @@
 			<line color="deckcolorbright" x="+0" y="+0" width="180" height="2"/>
 			<panel class="knob_with_2buttons_" x="+0" y="+15">
 				<!--panel-->
-					<slider action="pitch" dblclick="pitch_reset 1bt" frommiddle="true"/>
+					<slider action="pitch" dblclick="pitch_reset 0.1bt" frommiddle="true"/>
 					<textzone>
 						<text text="PITCH"/>
 					</textzone>
@@ -1279,18 +1329,17 @@
 			</group>
 			<group x="+130" y="+[HEIGHT]/4*4+10">
 				<line x="-4" y="+18" width="250" height="1" color="deckcolorbright" />
-				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_button 2 4">
+				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_button 2 4 & set brake_length 0.5">
 					<pos x="+0" y="+0"/>
 					<down shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
-
 					<size width="35" />
-					<text text="1/2" />
+					<text text="1/2" textaction="brake_length 0.5 ? 1 : 0"/>
 				</button>
-				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_button 2 6">
+				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_button 2 6 & set brake_length 1">
 					<pos x="+38" y="+0"/>
 					<down shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
 					<size width="35" />
-					<text text="1" />
+					<text text="1" textaction="brake_length 1 ? on : off" />
 				</button>
 				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_button 2 8">
 					<pos x="+76" y="+0"/>
