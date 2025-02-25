@@ -626,14 +626,14 @@
 			</define>
 
 			<define class="padselector" placeholders="important=true,textaction,*width=87,*height=60">
-				<button class="button_padselect" x="+0*[WIDTH]" y="+0" action="pad_page btn1" rightclick="pad_page_select 1" textaction="pad_page btn1 &amp; param_uppercase"/>
-				<button class="button_padselect" x="+1*[WIDTH]" y="+0" action="pad_page btn2" rightclick="pad_page_select 2" textaction="pad_page btn2 &amp; param_uppercase"/>
-				<button class="button_padselect" x="+2*[WIDTH]" y="+0" action="pad_page btn3" rightclick="pad_page_select 3" textaction="pad_page btn3 &amp; param_uppercase"/>
-				<button class="button_padselect" x="+3*[WIDTH]" y="+0" action="pad_page btn4" rightclick="pad_page_select 4" textaction="pad_page btn4 &amp; param_uppercase"/>
-				<button class="button_padselect" x="+4*[WIDTH]" y="+0" action="pad_page btn5" rightclick="pad_page_select 5" textaction="pad_page btn5 &amp; param_uppercase"/>
-				<button class="button_padselect" x="+5*[WIDTH]" y="+0" action="pad_page btn6" rightclick="pad_page_select 6" textaction="pad_page btn6 &amp; param_uppercase"/>
-				<button class="button_padselect" x="+6*[WIDTH]" y="+0" action="pad_page btn7" rightclick="pad_page_select 7" textaction="pad_page btn7 &amp; param_uppercase"/>
-				<button class="button_padselect" x="+7*[WIDTH]" y="+0" action="pad_page btn8" rightclick="pad_page_select 8" textaction="pad_page btn8 &amp; param_uppercase"/>
+				<button class="button_padselect" x="+0*[WIDTH]" y="+0" action="pad_page 1" rightclick="pad_page_select 1" textaction="pad_page btn1 &amp; param_uppercase"/>
+				<button class="button_padselect" x="+1*[WIDTH]" y="+0" action="pad_page 2" rightclick="pad_page_select 2" textaction="pad_page btn2 &amp; param_uppercase"/>
+				<button class="button_padselect" x="+2*[WIDTH]" y="+0" action="pad_page 3" rightclick="pad_page_select 3" textaction="pad_page btn3 &amp; param_uppercase"/>
+				<button class="button_padselect" x="+3*[WIDTH]" y="+0" action="pad_page 4" rightclick="pad_page_select 4" textaction="pad_page btn4 &amp; param_uppercase"/>
+				<button class="button_padselect" x="+4*[WIDTH]" y="+0" action="pad_page 5" rightclick="pad_page_select 5" textaction="pad_page btn5 &amp; param_uppercase"/>
+				<button class="button_padselect" x="+5*[WIDTH]" y="+0" action="pad_page 6" rightclick="pad_page_select 6" textaction="pad_page btn6 &amp; param_uppercase"/>
+				<button class="button_padselect" x="+6*[WIDTH]" y="+0" action="pad_page 7" rightclick="pad_page_select 7" textaction="pad_page btn7 &amp; param_uppercase"/>
+				<button class="button_padselect" x="+7*[WIDTH]" y="+0" action="pad_page 8" rightclick="pad_page_select 8" textaction="pad_page btn8 &amp; param_uppercase"/>
 			</define>
 
 			<define class="padbutton" placeholders="action,rightclick,important=true,textaction,sourcecolor,textsize=22,*width=150,*height=120">
@@ -992,10 +992,10 @@
 						<text action="sampler_volume_master & param_cast 'percentage'" />
 					</button>
 				</panel>
-				<button action="deck left sampler_rec" deck="left">
+				<button action="deck left sampler_rec">
 					<text text="REC LEFT"/>
 				</button>
-				<button action="deck right sampler_rec" deck="right">
+				<button action="deck right sampler_rec">
 					<text text="REC RIGHT"/>
 				</button>
 			</panel>
@@ -1128,14 +1128,14 @@
 					<text text="RESET"/>
 				</button>
 			</panel>
-			<button class="button1" action="loop_half" x="+0" y="+120">
+			<button class="button2" action="loop_half" x="+0" y="+110">
 				<text text="-"/>
 			</button>
-			<button class="button1" action="loop" x="+70" y="+120">
+			<button class="button2" action="loop" x="+70" y="+110">
 				<size width="40"/>
 				<text action="get_loop"/>
 			</button>
-			<button class="button1" action="loop_double" x="+120" y="+120">
+			<button class="button2" action="loop_double" x="+120" y="+110">
 				<text text="+"/>
 			</button>
 			<button class="button1" action="loop_in" x="+0" y="+175">
