@@ -1,4 +1,4 @@
-<skin name="Touch This!" author="Don Julien - ok404" comment="Optimized for 1920x1200 touchscreen - Version 0.8 - 2024" version="8" preview="preview.png" nbdecks="4" width="1920" height="1200">
+<skin name="Touch This!" author="Don Julien - ok404" comment="Optimized for 1920x1200 touchscreen - Version 0.9 - 2024" version="8" preview="preview.png" nbdecks="4" width="1920" height="1200">
 	<copyright>- (c)2024 - Don Julien -</copyright>
 	<font name="Arial"/>
 	<nbdecks value="4"/>
@@ -278,8 +278,8 @@
 		</group>
 	</group>
 	<!--======================INIT======================-->
-	<oninit action="set 'deck_panel' 1" deck="left"/>
-	<oninit action="set 'deck_panel' 1" deck="right"/>
+	<oninit action="set '@deck_panel' 1" deck="left"/>
+	<oninit action="set '@deck_panel' 1" deck="right"/>
 	<oninit action="set 'brake_length' 0" deck="left"/>
 	<oninit action="set 'brake_length' 0" deck="right"/>
 	<oninit action="set '$crosseq' 1"/>
@@ -315,7 +315,6 @@
 					<pos x="+0" y="+[BUTTON_HEIGHT]*2"/>
 					<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]"/>
 					<off shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
-					<!--{1}**over shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"-->
 					<down shape="square" color="buttonon_invert" border="bordercolor" border_size="1" radius="5"/>
 					<icon sysicon="[SYSICON]" coloroff="[TEXTCOLOR]" colorover="textover" colordown="texton" colorselected="texton" width="[ICONSIZE]" height="[ICONSIZE]"/>
 				</button>
@@ -474,7 +473,6 @@
 					<pos x="+0" y="+[BUTTON_HEIGHT]*2"/>
 					<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]"/>
 					<off shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
-					<!--over shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/-->
 					<down shape="square" color="buttonon_invert" border="bordercolor" border_size="1" radius="5"/>
 				</button>
 				<slider action="level" rightclick="temporary" orientation="vertical">
@@ -523,7 +521,6 @@
 					<pos x="+115" y="+[BUTTON_HEIGHT]*2"/>
 					<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]"/>
 					<off shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
-					<!--over shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/-->
 					<down shape="square" color="buttonon_invert" border="bordercolor" border_size="1" radius="5"/>
 				</button>
 				<slider action="level" rightclick="temporary" orientation="vertical">
@@ -624,7 +621,6 @@
 					action="[TEXTACTION]" important="[IMPORTANT]"/>
 				<size width="[WIDTH]" height="[HEIGHT]"/>
 			</define>
-
 			<define class="padselector" placeholders="important=true,textaction,*width=87,*height=60">
 				<button class="button_padselect" x="+0*[WIDTH]" y="+0" action="pad_page 1" rightclick="pad_page_select 1" textaction="pad_page btn1 &amp; param_uppercase"/>
 				<button class="button_padselect" x="+1*[WIDTH]" y="+0" action="pad_page 2" rightclick="pad_page_select 2" textaction="pad_page btn2 &amp; param_uppercase"/>
@@ -635,7 +631,6 @@
 				<button class="button_padselect" x="+6*[WIDTH]" y="+0" action="pad_page 7" rightclick="pad_page_select 7" textaction="pad_page btn7 &amp; param_uppercase"/>
 				<button class="button_padselect" x="+7*[WIDTH]" y="+0" action="pad_page 8" rightclick="pad_page_select 8" textaction="pad_page btn8 &amp; param_uppercase"/>
 			</define>
-
 			<define class="padbutton" placeholders="action,rightclick,important=true,textaction,sourcecolor,textsize=22,*width=150,*height=120">
 				<button action="[ACTION]" rightclick="[RIGHTCLICK]">
 					<size width="[WIDTH]" height="[HEIGHT]"/>
@@ -779,7 +774,6 @@
 					<pos x="+210" y="+[HEIGHT]+10"/>
 					<text action="get_effect_button_name 2"/>
 				</button>
-				
 				<button class="button1" action="effect_select 1 'Echo'">
 					<pos x="+0" y="+[HEIGHT]+55"/>
 					<text text="ECHO"/>
@@ -796,7 +790,6 @@
 					<pos x="+210" y="+[HEIGHT]+55"/>
 					<text text="FLANGER"/>
 				</button>
-				
 				<button class="button1" action="effect_select 1 'Delay'">
 					<pos x="+0" y="+[HEIGHT]+100"/>
 					<text text="DELAY"/>
@@ -875,7 +868,6 @@
 					<pos x="+210" y="+[HEIGHT]+10"/>
 					<text action="get_effect_button_name 'sampler' 2"/>
 				</button>
-				
 				<button class="button1" action="effect_select 'sampler' 'Echo'">
 					<pos x="+0" y="+[HEIGHT]+55"/>
 					<text text="ECHO"/>
@@ -892,7 +884,6 @@
 					<pos x="+210" y="+[HEIGHT]+55"/>
 					<text text="FLANGER"/>
 				</button>
-				
 				<button class="button1" action="effect_select 'sampler' 'Delay'">
 					<pos x="+0" y="+[HEIGHT]+100"/>
 					<text text="DELAY"/>
@@ -980,7 +971,6 @@
 				<pos x="+100" y="1080"/>
 				<icon sysicon="sampler_mode" width="35" height="35"/>
 			</button>
-
 			<panel class="knob_with_2buttons" x="+300" y="1080">
 				<panel>
 					<line color="darker" />
@@ -999,7 +989,6 @@
 					<text text="REC RIGHT"/>
 				</button>
 			</panel>
-
 			<button class="button_transport" action="sampler_options 'sideview'" query="off">>
 				<pos x="+500" y="1080"/>
 				<text text="OPTIONS" />
@@ -1034,7 +1023,7 @@
 				<size width="30" height="95"/>
 				<text align="center" valign="middle" text="DECK"/>
 			</textzone>
-			<button class="button_transport" action="set 'deck_panel' 1">
+			<button class="button_transport" action="set '@deck_panel' 1">
 				<pos x="+355" y="1080"/>
 				<size width="95"/>
 				<text text="CLOSE" />
@@ -1060,6 +1049,7 @@
 				<text text="APPEND" />
 			</button>
 		</define>
+
 		<define class="browser" classdeck="right">
 			<browser>
 				<size width="700" height="900"/>
@@ -1080,7 +1070,7 @@
 				<size width="30" height="95"/>
 				<text align="center" valign="middle" text="DECK"/>
 			</textzone>
-			<button class="button_transport" action="set 'deck_panel' 1">
+			<button class="button_transport" action="set '@deck_panel' 1">
 				<pos x="+250" y="1080"/>
 				<size width="95"/>
 				<text text="CLOSE" />
@@ -1462,7 +1452,6 @@
 				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_button 2 4">
 					<pos x="+80" y="+0"/>
 					<down shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
-
 					<size width="35" />
 					<text text="1/2" />
 				</button>
@@ -1566,25 +1555,25 @@
 		</panel>
 		<!--======================PANEL BUTTONS======================-->
 		<deck deck="left">
-			<button class="button1" action="set 'deck_panel' 1" x="+0" y="+0">
+			<button class="button1" action="set '@deck_panel' 1" x="+0" y="+0">
 				<text text="DECK"/>
 			</button>
-			<button class="button1" action="set 'deck_panel' 2" x="+0" y="+53">
+			<button class="button1" action="set '@deck_panel' 2" x="+0" y="+53">
 				<text text="BROWSER"/>
 			</button>
-			<button class="button1" action="set 'deck_panel' 3" x="+0" y="+105" 
-					query="sampler_used ? blink : var 'deck_panel' 3 ? on">
+			<button class="button1" action="set '@deck_panel' 3" x="+0" y="+105" 
+					query="sampler_used ? blink : var '@deck_panel' 3 ? on">
 				<text text="SAMPLER"/>
 			</button>
 		</deck>
 		<deck deck="right">
-			<button class="button1" action="set 'deck_panel' 1" x="+375" y="+0">
+			<button class="button1" action="set '@deck_panel' 1" x="+375" y="+0">
 				<text text="DECK"/>
 			</button>
-			<button class="button1" action="set 'deck_panel' 2" x="+375" y="+53">
+			<button class="button1" action="set '@deck_panel' 2" x="+375" y="+53">
 				<text text="BROWSER"/>
 			</button>
-			<button class="button1" action="set 'deck_panel' 3" x="+375" y="+105" 
+			<button class="button1" action="set '@deck_panel' 3" x="+375" y="+105" 
 					query="sampler_used ? blink : var 'right_panel' 3 ? on">
 				<text text="SAMPLER"/>
 			</button>
@@ -1612,7 +1601,7 @@
 
 	<!--======================LEFT DECK======================-->
 	<deck deck="left">
-		<panel name="left_deck" x="30" y="105" visibility="var 'deck_panel' 1">
+		<panel name="left_deck" x="30" y="105" visibility="var '@deck_panel' 1">
 			<panel class="fxpad" x="+0" y="+0"/>
 			<panel class="jogwheel" x="+330" y="+0"/>
 			<panel class="songinfo" x="+0" y="490"/>		
@@ -1626,12 +1615,12 @@
 		</panel>
 		<panel class="pitch_loop" x="750" y="255"/>
 		<panel class="audiomixer" x="750" y="490"/>
-		<panel class="browser" name="browser_left" x="30" y="100" visibility="var 'deck_panel' 2"/>
-		<panel class="sampler" name="sampler_left" x="30" y="100" visibility="var 'deck_panel' 3"/>
+		<panel class="browser" name="browser_left" x="30" y="100" visibility="var '@deck_panel' 2"/>
+		<panel class="sampler" name="sampler_left" x="30" y="100" visibility="var '@deck_panel' 3"/>
 	</deck>
 	<!--======================RIGHT DECK======================-->
 	<deck deck="right">
-		<panel name="right_deck" x="1200" y="105" visibility="var 'deck_panel' 1">
+		<panel name="right_deck" x="1200" y="105" visibility="var '@deck_panel' 1">
 			<panel class="fxpad" x="+430" y="+0"/>
 			<panel class="jogwheel" x="+0" y="+0"/>
 			<panel class="songinfo" x="+0" y="490"/>		
@@ -1645,8 +1634,8 @@
 		</panel>
 		<panel class="pitch_loop" x="1000" y="255"/>
 		<panel class="audiomixer" x="1000" y="490"/>
-		<panel class="browser" name="browser_right" x="1200" y="100" visibility="var 'deck_panel' 2"/>
-		<panel class="sampler" name="sampler_right" x="1200" y="100" visibility="var 'deck_panel' 3"/>
+		<panel class="browser" name="browser_right" x="1200" y="100" visibility="var '@deck_panel' 2"/>
+		<panel class="sampler" name="sampler_right" x="1200" y="100" visibility="var '@deck_panel' 3"/>
 	</deck>
 
 	<!--======================LABELS & MENU======================-->
@@ -1669,43 +1658,10 @@
 			<item text = "Maximize" action = "maximize" hascheck = "false" />
 			<item text = "Exit" action = "close" hascheck = "false" />
 		</menu>
-<!--
-		<textzone>
-			<pos x="+0" y="+45"/>
-			<size width="65" height="90"/>
-			<text align="center" valign="middle" text="PITCH"/>
-		</textzone>
-		<textzone>
-			<pos x="+0" y="+150"/>
-			<size width="65" height="90"/>
-			<text align="center" valign="middle" text="LOOP"/>
-		</textzone>
-		<textzone>
-			<pos x="+0" y="+285"/>
-			<size width="65" height="90"/>
-			<text align="center" valign="middle" text="VOCAL"/>
-		</textzone>
-		<textzone>
-			<pos x="+0" y="+390"/>
-			<size width="65" height="90"/>
-			<text align="center" valign="middle" text="INSTRU"/>
-		</textzone>
-		<textzone>
-			<pos x="+0" y="+485"/>
-			<size width="65" height="90"/>
-			<text align="center" valign="middle" text="BASS"/>
-		</textzone>
-		<textzone>
-			<pos x="+0" y="+590"/>
-			<size width="65" height="90"/>
-			<text align="center" valign="middle" text="RHYTHM"/>
-		</textzone>
--->
 		<button class="button2" x="+10" y="+720"
 		        action="shift">
 			<text text="SHIFT"/>
 		</button>
-
 		<logo circle="false" os="pc">
 			<pos x="-20" y="+1150"/>
 			<size width="100" height="40"/>
@@ -1741,6 +1697,4 @@
 			</fader>
 		</slider>
 	</panel>
-
 </skin>
-
