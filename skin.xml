@@ -324,22 +324,29 @@
 					<text align="center" valign="middle"/>
 				</textzone>
 			</define>
-			<define class="up_down_num">
+			<define class="up_down_num" placeholders="*button_height=60,*button_width=40">
 				<button>
 					<pos x="+0" y="+0"/>
-					<size width="30" height="48"/>
+					<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]"/>
 					<icon sysicon="arrowleft" width="32" height="32" align="left" color="textoff2" colorover="textover" colordown="texton"/>
 				</button>
 				<button>
-					<pos x="+30+4" y="+0"/>
-					<size width="50" height="48"/>
+					<pos x="+[BUTTON_WIDTH]" y="+0"/>
+					<size width="[BUTTON_WIDTH]*2" height="[BUTTON_HEIGHT]"/>
 					<text fontsize="22" color="textdarker" colorover="textover" colorselected="deckcolorbright" align="center" weight="bold" important="true"/>
 				</button>
 				<button>
-					<pos x="+30+50+8" y="+0"/>
-					<size width="30" height="48"/>
-					<icon sysicon="arrowright" width="32" height="32" align="left" coloroff="textoff2" colorover="textover" colordown="texton"/>
+					<pos x="+[BUTTON_WIDTH]*3" y="+0"/>
+					<size width="[BUTTON_WIDTH]" height="[BUTTON_HEIGHT]"/>
+					<icon sysicon="arrowright" width="32" height="32" align="right" coloroff="textoff2" colorover="textover" colordown="texton"/>
 				</button>
+				<line x="+0" y="+[BUTTON_HEIGHT]+2" width="[BUTTON_WIDTH]*4+4" height="2" color="deckcolorbright" action="shift"/>
+				<textzone action="shift">
+					<pos x="+0" y="+[BUTTON_HEIGHT]+8"/>
+					<size width="[BUTTON_WIDTH]*4" height="20"/>
+					<text text="TEXT"
+					 align="center" color="texton" fontsize="10" valign="middle"/>
+				</textzone>
 			</define>
 			<define class="up_down_txt">
 				<button>
@@ -936,12 +943,15 @@
 			</panel>
 			<button class="button2" action="pfl" sysicon="headphones" x="+110" y="+10"/>
 			<group name="key_area" x="+200" y="+15">
-				<panel class="up_down_num" x="+0" y="+0">
+				<panel class="up_down_num" x="+0" y="-20">
 					<button action="key_move -1"/>
 					<button action="key_match_button">
 						<text action="get_key_modifier_text"/>
 					</button>
 					<button action="key_move +1"/>
+					<textzone>
+						<text text="KEY"/>
+					</textzone>
 				</panel>
 				<textzone action="setting 'keyDisplay'">
 					<pos x="+155" y="-15"/>
@@ -949,7 +959,7 @@
 					<text fontsize="30" color="deckcolorbright" weight="bold" align="right" action="get_key" important="true"/>
 				</textzone>
 				<button action="key_match_menu">
-					<size width="30" height="40"/>
+					<size width="70" height="40"/>
 					<pos x="+177" y="+20"/>
 					<icon dy="+1" sysicon="chevrondown" width="28" height="28" color="textdark" colorover="textover" colordown="texton" colorselected="texton"/>
 				</button>
@@ -1118,6 +1128,19 @@
 					<text text="RESET"/>
 				</button>
 			</panel>
+			<!-- ************* -->
+			<panel class="up_down_num" x="+10" y="+135">
+				<button action="loop_half"/>
+				<button action="shift ? setting 'loopbackmode' yes & loop : setting 'loopbackmode' no & loop">
+					<text action="get_loop"/>
+				</button>
+				<button action="loop_double +1"/>
+				<textzone>
+					<text text="LOOP"/>
+				</textzone>
+			</panel>
+			<!-- ************* -->
+			<!--
 			<button class="button2" action="loop_half" x="+0" y="+110">
 				<text text="-"/>
 			</button>
@@ -1138,6 +1161,7 @@
 			<button class="button1" action="loop_out" x="+120" y="+175">
 				<text text="OUT"/>
 			</button>
+			-->
 		</define>
 		<!-- ============AUDIOMIXER================= -->
 		<define class="audiomixer" width="180" height="960">
@@ -1301,6 +1325,17 @@
 					<pos x="+0" y="+[HEIGHT]/4*0"/>
 					<text text="MASTER"/> <!--action="masterdeck ? on : off" /-->
 				</button>
+				<panel class="up_down_num" x="+0" y="+[HEIGHT]/4*4-35">
+					<button action="shift ? beatjump_select -1 : beatjump -1"/>
+					<button action="shift">
+						<text action="beatjump"/>
+					</button>
+					<button action="shift ? beatjump_select +1 : beatjump +1"/>
+					<textzone>
+						<text text="JUMP"/>
+					</textzone>
+				</panel>
+				<!--
 				<panel class="up_down_num" x="+0" y="+[HEIGHT]/4*3+40">
 					<button action="beatjump_select -1"/>
 					<button action="beatjump_page">
@@ -1315,36 +1350,24 @@
 				<button class="button1" action="beatjump +1">
 					<pos x="+60" y="+[HEIGHT]/4*4+10"/>
 					<text text="&gt;" />
-				</button>`
+				</button>
+				-->
 			</group>
-			<group x="+130" y="+[HEIGHT]/4*4+10">
-				<line x="-4" y="+18" width="250" height="1" color="deckcolorbright" />
-				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_button 2 4 & set brake_length 0.5">
-					<pos x="+0" y="+0"/>
-					<down shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
-					<size width="35" />
-					<text text="1/2" textaction="brake_length 0.5 ? 1 : 0"/>
-				</button>
-				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_button 2 6 & set brake_length 1">
-					<pos x="+38" y="+0"/>
-					<down shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
-					<size width="35" />
-					<text text="1" textaction="brake_length 1 ? on : off" />
-				</button>
-				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_button 2 8">
-					<pos x="+76" y="+0"/>
-					<down shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
-					<size width="35" />
-					<text text="2" />
-				</button>
-				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_button 2 9">
-					<pos x="+114" y="+0"/>
-					<down shape="square" color="buttonoff" border="bordercolor" border_size="1" radius="5"/>
-					<size width="35" />
-					<text text="4" />
-				</button>
-				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_activate 2">
-					<pos x="+180" y="+0"/>
+			<group x="+260" y="+[HEIGHT]/4*4-10">
+				<line x="+15" y="+37" width="25" height="2" color="deckcolorbright" />
+				<menu> 
+					<pos x="+0" y="+30" /> 
+					<size width="15" height="15" /> 
+					<up shape="circle" color="gray" border="" border_size="" radius="" gradient="" color2=""/> 
+					<over shape="circle" color="graydark" border="" border_size="" radius="" gradient="" color2=""/> 
+					<down shape="circle" color="graydarker" border="" border_size="" radius="" gradient="" color2=""/> 
+					<item text = "1/2" action = "effect_select 2 'Slipbrake8' & effect_button 2 4" /> 
+					<item text = "1" action = "effect_select 2 'Slipbrake8' & effect_button 2 6" /> 
+					<item text = "2" action = "effect_select 2 'Slipbrake8' & effect_button 2 8" /> 
+					<item text = "4" action = "effect_select 2 'Slipbrake8' & effect_button 2 9" /> 
+				</menu>
+				<button class="button2" x="+30" y="+0"
+						action="effect_select 2 'Slipbrake8' & effect_activate 2">
 					<text text="BRAKE"/>
 				</button>
 			</group>
@@ -1430,23 +1453,36 @@
 					<pos x="+0" y="+[HEIGHT]/4*0"/>
 					<text text="MASTER"/> <!--action="masterdeck ? on : off" /-->
 				</button>
-				<panel class="up_down_num" x="-60" y="+[HEIGHT]/4*3+40">
-					<button action="beatjump_select -1"/>
-					<button action="beatjump_page">
+				<panel class="up_down_num" x="-100" y="+[HEIGHT]/4*4-35">
+					<button action="shift ? beatjump_select -1 : beatjump -1"/>
+					<button action="shift">
 						<text action="beatjump"/>
 					</button>
-					<button action="beatjump_select +1"/>
+					<button action="shift ? beatjump_select +1 : beatjump +1"/>
+					<textzone>
+						<text text="JUMP"/>
+					</textzone>
 				</panel>
-				<!--text x="-60" y="+[HEIGHT]/4*3" text="JUMP"/-->
-				<button class="button1" action="beatjump -1">
-					<pos x="-60" y="+[HEIGHT]/4*4+10"/>
-					<text text="&lt;" />
-				</button>
-				<button class="button1" action="beatjump +1">
-					<pos x="+0" y="+[HEIGHT]/4*4+10"/>
-					<text text="&gt;" />
+			</group>
+			<group x="+0" y="+[HEIGHT]/4*4-10">
+				<line x="+50" y="+37" width="25" height="2" color="deckcolorbright" />
+				<menu> 
+					<pos x="+75" y="+30" /> 
+					<size width="15" height="15" /> 
+					<up shape="circle" color="gray" border="" border_size="" radius="" gradient="" color2=""/> 
+					<over shape="circle" color="graydark" border="" border_size="" radius="" gradient="" color2=""/> 
+					<down shape="circle" color="graydarker" border="" border_size="" radius="" gradient="" color2=""/> 
+					<item text = "1/2" action = "effect_select 2 'Slipbrake8' & effect_button 2 4" /> 
+					<item text = "1" action = "effect_select 2 'Slipbrake8' & effect_button 2 6" /> 
+					<item text = "2" action = "effect_select 2 'Slipbrake8' & effect_button 2 8" /> 
+					<item text = "4" action = "effect_select 2 'Slipbrake8' & effect_button 2 9" /> 
+				</menu>
+				<button class="button2" x="+0" y="+0"
+						action="effect_select 2 'Slipbrake8' & effect_activate 2">
+					<text text="BRAKE"/>
 				</button>
 			</group>
+<!--
 			<group x="+0" y="+[HEIGHT]/4*4+10">
 				<line x="-4" y="+18" width="250" height="1" color="deckcolorbright" />
 				<button class="button1" action="effect_select 2 'Slipbrake8' & effect_button 2 4">
@@ -1478,6 +1514,7 @@
 					<text text="BRAKE"/>
 				</button>
 			</group>
+			-->
 		</define>
 	</group>
 
